@@ -25,6 +25,7 @@
 {
     [TuijianNetManager getTuijianDetailId:self.Id city:self.city completionHandle:^(TuijianDetailModel *model, NSError *error) {
         [self.dataArr addObjectsFromArray:model.companyList];
+        completionHandle(error);
     }];
 }
 -(TuijianDetailCompanylistModel *)modelForRow:(NSInteger)row

@@ -8,6 +8,7 @@
 
 #import "TuijianDetailViewController.h"
 #import "TuijianDetailViewModel.h"
+#import "TuijianDetailCell.h"
 @interface TuijianDetailViewController ()<iCarouselDelegate,iCarouselDataSource,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)TuijianDetailViewModel *detailVm;
@@ -26,7 +27,7 @@
 -(TuijianDetailViewModel *)detailVm
 {
     if (!_detailVm) {
-        _detailVm=[[TuijianDetailViewModel alloc]initWithId:self.Model.ID city:@"北京"];
+        _detailVm=[[TuijianDetailViewModel alloc]initWithId:self.Model.ID city:@"上海"];
     }
     return _detailVm;
 }
@@ -40,6 +41,7 @@
         [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.mas_equalTo(0);
         }];
+        [_tableView registerClass:[TuijianDetailCell class] forCellReuseIdentifier:@"Cell"];
         
     }
     return _tableView;
@@ -151,17 +153,31 @@
         }];
     }
     UIImageView *imageView = (UIImageView *)[view viewWithTag:100];
-    [imageView setImageWithURL:[NSURL URLWithString:self.Model.imageUrl[index]] placeholderImage:[UIImage imageNamed:@"cell_bg_noData_1"]];
+    [imageView setImageWithURL:[NSURL URLWithString:self.Model.imageUrl[index]]];
     return view;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return self.detailVm.rowNumber;
 }
-
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    TuijianDetailCell *cell=[tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    [cell.iconIv setImageWithURL:[self.detailVm iconForRow:indexPath.row]];
+    cell.companyNameLb.text=[self.detailVm companyNameForRow:indexPath.row];
+    cell.areaDetailLb.text=[self.detailVm companyDetailForRow:indexPath.row];
+    return cell;
+}
+-(CGFloat )tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewAutomaticDimension;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.tableHeaderView=[self header];
+    [self.detailVm getDataFromNetCompleteHandle:^(NSError *error) {
+        [self.tableView reloadData];
+    }];
     // Do any additional setup after loading the view.
 }
 
