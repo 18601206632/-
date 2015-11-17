@@ -10,11 +10,12 @@
 #import "PicViewModel.h"
 #import "PSCollectionView.h"
 #import "Factory.h"
-#import "PicDetailViewController.h"
-@interface PicViewController ()<PSCollectionViewDelegate ,PSCollectionViewDataSource,UIScrollViewDelegate>
+#import <MWPhotoBrowser.h>
+@interface PicViewController ()<PSCollectionViewDelegate ,PSCollectionViewDataSource,UIScrollViewDelegate,MWPhotoBrowserDelegate>
 @property (nonatomic,strong)PSCollectionView *collectView;
 @property (nonatomic,strong)PicViewModel *picVM;
 @property (nonatomic,strong)NSMutableArray *images;
+@property (nonatomic,strong)NSArray *photos;
 @end
 
 @implementation PicViewController
@@ -64,6 +65,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    [Factory addMenuItemToVc:self];
+    
+    
+    
     
     self.collectView.header=[MJRefreshNormalHeader headerWithRefreshingBlock:^{
        [self.picVM refreshDataCompletionHandle:^(NSError *error) {
@@ -122,11 +126,43 @@
 }
 -(void)collectionView:(PSCollectionView *)collectionView didSelectCell:(PSCollectionViewCell *)cell atIndex:(NSInteger)index
 {
-    PicDetailViewController *vc=[[PicDetailViewController alloc]initWithType:self.infoType];
-    vc.images=[self.images copy];
-    [self.navigationController pushViewController:vc animated:YES];
+//    PicDetailViewController *vc=[[PicDetailViewController alloc]initWithType:self.infoType];
+//    vc.images=[self.images copy];
+//    [self.navigationController pushViewController:vc animated:YES];
+    NSMutableArray *photos = [[NSMutableArray alloc] init];
+    BOOL displayActionButton = YES;
+    BOOL displaySelectionButtons = NO;
+    BOOL displayNavArrows = NO;
+    BOOL enableGrid = YES;
+    BOOL startOnGrid = NO;
+    BOOL autoPlayOnAppear = NO;
+//    [photos addObject:[MWPhoto photoWithURL:[self.picVM iconForRow:index]]];
+    for (int i=0; i<self.picVM.rowNumber; i++) {
+        [photos addObject:[MWPhoto photoWithURL:[self.picVM iconForRow:i]]];
+    }
+    self.photos=photos;
+    MWPhotoBrowser *browser = [[MWPhotoBrowser alloc] initWithDelegate:self];
+    browser.displayActionButton = displayActionButton;
+    browser.displayNavArrows = displayNavArrows;
+    browser.displaySelectionButtons = displaySelectionButtons;
+    browser.alwaysShowControls = displaySelectionButtons;
+    browser.zoomPhotosToFill = YES;
+    browser.enableGrid = enableGrid;
+    browser.startOnGrid = startOnGrid;
+    browser.enableSwipeToDismiss = NO;
+    browser.autoPlayOnAppear = autoPlayOnAppear;
+    [browser setCurrentPhotoIndex:index];
+    [self.navigationController pushViewController:browser animated:YES];
+}
+- (NSUInteger)numberOfPhotosInPhotoBrowser:(MWPhotoBrowser *)photoBrowser {
+    return _photos.count;
 }
 
+- (id <MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index {
+    if (index < _photos.count)
+        return [_photos objectAtIndex:index];
+    return nil;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

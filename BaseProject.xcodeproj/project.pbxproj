@@ -35,7 +35,6 @@
 		85159A211BF0223C00927523 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85159A201BF0223C00927523 /* LeftViewController.m */; };
 		85159A241BF024D700927523 /* Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 85159A231BF024D700927523 /* Factory.m */; };
 		85159A301BF0616400927523 /* TuijianCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85159A2F1BF0616400927523 /* TuijianCell.m */; };
-		855165D21BF420E000328B3C /* PicDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 855165D11BF420E000328B3C /* PicDetailViewController.m */; };
 		855865991BF2135400C1D078 /* TRImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 855865981BF2135400C1D078 /* TRImageView.m */; };
 		8558659C1BF21AB200C1D078 /* CompanyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8558659B1BF21AB200C1D078 /* CompanyViewController.m */; };
 		8560A0151BE79581009774AF /* TuijianModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8560A0141BE79581009774AF /* TuijianModel.m */; };
@@ -117,8 +116,6 @@
 		85159A231BF024D700927523 /* Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Factory.m; sourceTree = "<group>"; };
 		85159A2E1BF0616400927523 /* TuijianCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TuijianCell.h; sourceTree = "<group>"; };
 		85159A2F1BF0616400927523 /* TuijianCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TuijianCell.m; sourceTree = "<group>"; };
-		855165D01BF420E000328B3C /* PicDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicDetailViewController.h; sourceTree = "<group>"; };
-		855165D11BF420E000328B3C /* PicDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicDetailViewController.m; sourceTree = "<group>"; };
 		855865971BF2135400C1D078 /* TRImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRImageView.h; sourceTree = "<group>"; };
 		855865981BF2135400C1D078 /* TRImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRImageView.m; sourceTree = "<group>"; };
 		8558659A1BF21AB200C1D078 /* CompanyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyViewController.h; sourceTree = "<group>"; };
@@ -254,20 +251,15 @@
 		3886C0B01BD74A4A0014E661 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8508C5361BFB1F88006DBA04 /* 灵感 */,
+				8508C5351BFB1F7A006DBA04 /* 活动 */,
+				8508C5341BFB1F6A006DBA04 /* 公司 */,
+				8508C5331BFB1F5C006DBA04 /* 图库 */,
+				8508C5321BFB1F42006DBA04 /* 推荐 */,
 				3886C0BF1BD74B090014E661 /* BaseModel.h */,
 				3886C0C01BD74B090014E661 /* BaseModel.m */,
-				8560A0131BE79581009774AF /* TuijianModel.h */,
-				8560A0141BE79581009774AF /* TuijianModel.m */,
-				85057BA31BF0AA5200938DA1 /* PicModel.h */,
-				85057BA41BF0AA5200938DA1 /* PicModel.m */,
-				85D2435E1BF1B02E0012F644 /* companyModel.h */,
-				85D2435F1BF1B02E0012F644 /* companyModel.m */,
 				85C9459D1BF376E600EBBA52 /* CityModel.h */,
 				85C9459E1BF376E600EBBA52 /* CityModel.m */,
-				85F1E9651BF9662400F2F3E5 /* ActivityModel.h */,
-				85F1E9661BF9662400F2F3E5 /* ActivityModel.m */,
-				85F1EA0F1BF9DACF00F2F3E5 /* lingganModel.h */,
-				85F1EA101BF9DACF00F2F3E5 /* lingganModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -275,14 +267,11 @@
 		3886C0B11BD74A4A0014E661 /* NetManager */ = {
 			isa = PBXGroup;
 			children = (
+				8508C5391BFB1FB4006DBA04 /* 公司 */,
+				8508C5381BFB1FA5006DBA04 /* 图片 */,
+				8508C5371BFB1F99006DBA04 /* 推荐 */,
 				3886C0BC1BD74AFE0014E661 /* BaseNetManager.h */,
 				3886C0BD1BD74AFE0014E661 /* BaseNetManager.m */,
-				8560A0161BE796C6009774AF /* TuijianNetManager.h */,
-				8560A0171BE796C6009774AF /* TuijianNetManager.m */,
-				85057BA61BF0AD3D00938DA1 /* PicNetManager.h */,
-				85057BA71BF0AD3D00938DA1 /* PicNetManager.m */,
-				85D243611BF1B2090012F644 /* companyNetManager.h */,
-				85D243621BF1B2090012F644 /* companyNetManager.m */,
 			);
 			path = NetManager;
 			sourceTree = "<group>";
@@ -323,16 +312,12 @@
 		3886C0B51BD74A4A0014E661 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				85159A2E1BF0616400927523 /* TuijianCell.h */,
-				85159A2F1BF0616400927523 /* TuijianCell.m */,
-				85D243671BF1B5F70012F644 /* CompanyCell.h */,
-				85D243681BF1B5F70012F644 /* CompanyCell.m */,
+				8508C5421BFB202B006DBA04 /* 灵感 */,
+				8508C5411BFB2024006DBA04 /* 活动 */,
+				8508C5401BFB201E006DBA04 /* 公司 */,
+				8508C53F1BFB2018006DBA04 /* 推荐 */,
 				855865971BF2135400C1D078 /* TRImageView.h */,
 				855865981BF2135400C1D078 /* TRImageView.m */,
-				85F1E9721BF97E2300F2F3E5 /* ActivityCell.h */,
-				85F1E9731BF97E2300F2F3E5 /* ActivityCell.m */,
-				85F1EA151BF9FDE200F2F3E5 /* LingganCell.h */,
-				85F1EA161BF9FDE200F2F3E5 /* LingganCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -340,28 +325,17 @@
 		3886C0B61BD74A4A0014E661 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				3835CFB51BD90E150024CA48 /* ViewController.h */,
-				3835CFB61BD90E150024CA48 /* ViewController.m */,
-				85057BA01BF0A51000938DA1 /* PicViewController.h */,
-				85057BA11BF0A51000938DA1 /* PicViewController.m */,
+				8508C5311BFB1EF2006DBA04 /* 方案 */,
+				8508C5301BFB1EDA006DBA04 /* 品牌 */,
+				8508C52F1BFB1ECD006DBA04 /* 灵感 */,
+				8508C52E1BFB1EBD006DBA04 /* 活动 */,
+				8508C52D1BFB166D006DBA04 /* 公司 */,
+				8508C52C1BFB164E006DBA04 /* 图库 */,
+				8508C52B1BFB161A006DBA04 /* 推荐 */,
 				85159A1F1BF0223C00927523 /* LeftViewController.h */,
 				85159A201BF0223C00927523 /* LeftViewController.m */,
-				85057BB91BF0C77D00938DA1 /* PicListViewController.h */,
-				85057BBA1BF0C77D00938DA1 /* PicListViewController.m */,
-				8558659A1BF21AB200C1D078 /* CompanyViewController.h */,
-				8558659B1BF21AB200C1D078 /* CompanyViewController.m */,
 				85C945981BF3713600EBBA52 /* CityViewController.h */,
 				85C945991BF3713600EBBA52 /* CityViewController.m */,
-				855165D01BF420E000328B3C /* PicDetailViewController.h */,
-				855165D11BF420E000328B3C /* PicDetailViewController.m */,
-				85F1E96F1BF971AC00F2F3E5 /* ActivityViewController.h */,
-				85F1E9701BF971AC00F2F3E5 /* ActivityViewController.m */,
-				85F1EA181BFA04C200F2F3E5 /* LingganViewController.h */,
-				85F1EA191BFA04C200F2F3E5 /* LingganViewController.m */,
-				85F1EA1B1BFA0F2300F2F3E5 /* BrandViewController.h */,
-				85F1EA1C1BFA0F2300F2F3E5 /* BrandViewController.m */,
-				85F1EA1E1BFA108C00F2F3E5 /* FreeViewController.h */,
-				85F1EA1F1BFA108D00F2F3E5 /* FreeViewController.m */,
 			);
 			name = ViewController;
 			path = BaseProject/ViewController;
@@ -370,18 +344,13 @@
 		3886C0B71BD74A4A0014E661 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8508C53E1BFB2000006DBA04 /* 灵感 */,
+				8508C53D1BFB1FF4006DBA04 /* 活动 */,
+				8508C53C1BFB1FEA006DBA04 /* 公司 */,
+				8508C53B1BFB1FD9006DBA04 /* 图库 */,
+				8508C53A1BFB1FCE006DBA04 /* 推荐 */,
 				3886C0B91BD74AE90014E661 /* BaseViewModel.h */,
 				3886C0BA1BD74AE90014E661 /* BaseViewModel.m */,
-				8560A0191BE79AB6009774AF /* TuijianViewModel.h */,
-				8560A01A1BE79AB6009774AF /* TuijianViewModel.m */,
-				85057BA91BF0B6A900938DA1 /* PicViewModel.h */,
-				85057BAA1BF0B6A900938DA1 /* PicViewModel.m */,
-				85D243641BF1B4CA0012F644 /* CompanyViewModel.h */,
-				85D243651BF1B4CA0012F644 /* CompanyViewModel.m */,
-				85F1E96B1BF969AA00F2F3E5 /* ActivityViewModel.h */,
-				85F1E96C1BF969AA00F2F3E5 /* ActivityViewModel.m */,
-				85F1EA121BF9F12200F2F3E5 /* LingganVIewModel.h */,
-				85F1EA131BF9F12200F2F3E5 /* LingganVIewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -398,6 +367,224 @@
 				85057BB31BF0BBB100938DA1 /* README.md */,
 			);
 			path = "PSCollectionView-master";
+			sourceTree = "<group>";
+		};
+		8508C52B1BFB161A006DBA04 /* 推荐 */ = {
+			isa = PBXGroup;
+			children = (
+				3835CFB51BD90E150024CA48 /* ViewController.h */,
+				3835CFB61BD90E150024CA48 /* ViewController.m */,
+			);
+			name = "推荐";
+			sourceTree = "<group>";
+		};
+		8508C52C1BFB164E006DBA04 /* 图库 */ = {
+			isa = PBXGroup;
+			children = (
+				85057BA01BF0A51000938DA1 /* PicViewController.h */,
+				85057BA11BF0A51000938DA1 /* PicViewController.m */,
+				85057BB91BF0C77D00938DA1 /* PicListViewController.h */,
+				85057BBA1BF0C77D00938DA1 /* PicListViewController.m */,
+			);
+			name = "图库";
+			sourceTree = "<group>";
+		};
+		8508C52D1BFB166D006DBA04 /* 公司 */ = {
+			isa = PBXGroup;
+			children = (
+				8558659A1BF21AB200C1D078 /* CompanyViewController.h */,
+				8558659B1BF21AB200C1D078 /* CompanyViewController.m */,
+			);
+			name = "公司";
+			sourceTree = "<group>";
+		};
+		8508C52E1BFB1EBD006DBA04 /* 活动 */ = {
+			isa = PBXGroup;
+			children = (
+				85F1E96F1BF971AC00F2F3E5 /* ActivityViewController.h */,
+				85F1E9701BF971AC00F2F3E5 /* ActivityViewController.m */,
+			);
+			name = "活动";
+			sourceTree = "<group>";
+		};
+		8508C52F1BFB1ECD006DBA04 /* 灵感 */ = {
+			isa = PBXGroup;
+			children = (
+				85F1EA181BFA04C200F2F3E5 /* LingganViewController.h */,
+				85F1EA191BFA04C200F2F3E5 /* LingganViewController.m */,
+			);
+			name = "灵感";
+			sourceTree = "<group>";
+		};
+		8508C5301BFB1EDA006DBA04 /* 品牌 */ = {
+			isa = PBXGroup;
+			children = (
+				85F1EA1B1BFA0F2300F2F3E5 /* BrandViewController.h */,
+				85F1EA1C1BFA0F2300F2F3E5 /* BrandViewController.m */,
+			);
+			name = "品牌";
+			sourceTree = "<group>";
+		};
+		8508C5311BFB1EF2006DBA04 /* 方案 */ = {
+			isa = PBXGroup;
+			children = (
+				85F1EA1E1BFA108C00F2F3E5 /* FreeViewController.h */,
+				85F1EA1F1BFA108D00F2F3E5 /* FreeViewController.m */,
+			);
+			name = "方案";
+			sourceTree = "<group>";
+		};
+		8508C5321BFB1F42006DBA04 /* 推荐 */ = {
+			isa = PBXGroup;
+			children = (
+				8560A0131BE79581009774AF /* TuijianModel.h */,
+				8560A0141BE79581009774AF /* TuijianModel.m */,
+			);
+			name = "推荐";
+			sourceTree = "<group>";
+		};
+		8508C5331BFB1F5C006DBA04 /* 图库 */ = {
+			isa = PBXGroup;
+			children = (
+				85057BA31BF0AA5200938DA1 /* PicModel.h */,
+				85057BA41BF0AA5200938DA1 /* PicModel.m */,
+			);
+			name = "图库";
+			sourceTree = "<group>";
+		};
+		8508C5341BFB1F6A006DBA04 /* 公司 */ = {
+			isa = PBXGroup;
+			children = (
+				85D2435E1BF1B02E0012F644 /* companyModel.h */,
+				85D2435F1BF1B02E0012F644 /* companyModel.m */,
+			);
+			name = "公司";
+			sourceTree = "<group>";
+		};
+		8508C5351BFB1F7A006DBA04 /* 活动 */ = {
+			isa = PBXGroup;
+			children = (
+				85F1E9651BF9662400F2F3E5 /* ActivityModel.h */,
+				85F1E9661BF9662400F2F3E5 /* ActivityModel.m */,
+			);
+			name = "活动";
+			sourceTree = "<group>";
+		};
+		8508C5361BFB1F88006DBA04 /* 灵感 */ = {
+			isa = PBXGroup;
+			children = (
+				85F1EA0F1BF9DACF00F2F3E5 /* lingganModel.h */,
+				85F1EA101BF9DACF00F2F3E5 /* lingganModel.m */,
+			);
+			name = "灵感";
+			sourceTree = "<group>";
+		};
+		8508C5371BFB1F99006DBA04 /* 推荐 */ = {
+			isa = PBXGroup;
+			children = (
+				8560A0161BE796C6009774AF /* TuijianNetManager.h */,
+				8560A0171BE796C6009774AF /* TuijianNetManager.m */,
+			);
+			name = "推荐";
+			sourceTree = "<group>";
+		};
+		8508C5381BFB1FA5006DBA04 /* 图片 */ = {
+			isa = PBXGroup;
+			children = (
+				85057BA61BF0AD3D00938DA1 /* PicNetManager.h */,
+				85057BA71BF0AD3D00938DA1 /* PicNetManager.m */,
+			);
+			name = "图片";
+			sourceTree = "<group>";
+		};
+		8508C5391BFB1FB4006DBA04 /* 公司 */ = {
+			isa = PBXGroup;
+			children = (
+				85D243611BF1B2090012F644 /* companyNetManager.h */,
+				85D243621BF1B2090012F644 /* companyNetManager.m */,
+			);
+			name = "公司";
+			sourceTree = "<group>";
+		};
+		8508C53A1BFB1FCE006DBA04 /* 推荐 */ = {
+			isa = PBXGroup;
+			children = (
+				8560A0191BE79AB6009774AF /* TuijianViewModel.h */,
+				8560A01A1BE79AB6009774AF /* TuijianViewModel.m */,
+			);
+			name = "推荐";
+			sourceTree = "<group>";
+		};
+		8508C53B1BFB1FD9006DBA04 /* 图库 */ = {
+			isa = PBXGroup;
+			children = (
+				85057BA91BF0B6A900938DA1 /* PicViewModel.h */,
+				85057BAA1BF0B6A900938DA1 /* PicViewModel.m */,
+			);
+			name = "图库";
+			sourceTree = "<group>";
+		};
+		8508C53C1BFB1FEA006DBA04 /* 公司 */ = {
+			isa = PBXGroup;
+			children = (
+				85D243641BF1B4CA0012F644 /* CompanyViewModel.h */,
+				85D243651BF1B4CA0012F644 /* CompanyViewModel.m */,
+			);
+			name = "公司";
+			sourceTree = "<group>";
+		};
+		8508C53D1BFB1FF4006DBA04 /* 活动 */ = {
+			isa = PBXGroup;
+			children = (
+				85F1E96B1BF969AA00F2F3E5 /* ActivityViewModel.h */,
+				85F1E96C1BF969AA00F2F3E5 /* ActivityViewModel.m */,
+			);
+			name = "活动";
+			sourceTree = "<group>";
+		};
+		8508C53E1BFB2000006DBA04 /* 灵感 */ = {
+			isa = PBXGroup;
+			children = (
+				85F1EA121BF9F12200F2F3E5 /* LingganVIewModel.h */,
+				85F1EA131BF9F12200F2F3E5 /* LingganVIewModel.m */,
+			);
+			name = "灵感";
+			sourceTree = "<group>";
+		};
+		8508C53F1BFB2018006DBA04 /* 推荐 */ = {
+			isa = PBXGroup;
+			children = (
+				85159A2E1BF0616400927523 /* TuijianCell.h */,
+				85159A2F1BF0616400927523 /* TuijianCell.m */,
+			);
+			name = "推荐";
+			sourceTree = "<group>";
+		};
+		8508C5401BFB201E006DBA04 /* 公司 */ = {
+			isa = PBXGroup;
+			children = (
+				85D243671BF1B5F70012F644 /* CompanyCell.h */,
+				85D243681BF1B5F70012F644 /* CompanyCell.m */,
+			);
+			name = "公司";
+			sourceTree = "<group>";
+		};
+		8508C5411BFB2024006DBA04 /* 活动 */ = {
+			isa = PBXGroup;
+			children = (
+				85F1E9721BF97E2300F2F3E5 /* ActivityCell.h */,
+				85F1E9731BF97E2300F2F3E5 /* ActivityCell.m */,
+			);
+			name = "活动";
+			sourceTree = "<group>";
+		};
+		8508C5421BFB202B006DBA04 /* 灵感 */ = {
+			isa = PBXGroup;
+			children = (
+				85F1EA151BF9FDE200F2F3E5 /* LingganCell.h */,
+				85F1EA161BF9FDE200F2F3E5 /* LingganCell.m */,
+			);
+			name = "灵感";
 			sourceTree = "<group>";
 		};
 		85F779001BE83D4300354BDA /* ScrollDisplay */ = {
@@ -593,7 +780,6 @@
 				85F1EA111BF9DACF00F2F3E5 /* lingganModel.m in Sources */,
 				85F1E9671BF9662400F2F3E5 /* ActivityModel.m in Sources */,
 				3804CE521BD758F10046C8C8 /* NSObject+Common.m in Sources */,
-				855165D21BF420E000328B3C /* PicDetailViewController.m in Sources */,
 				85D243601BF1B02E0012F644 /* companyModel.m in Sources */,
 				85F1EA171BF9FDE200F2F3E5 /* LingganCell.m in Sources */,
 				85F1EA1A1BFA04C200F2F3E5 /* LingganViewController.m in Sources */,
