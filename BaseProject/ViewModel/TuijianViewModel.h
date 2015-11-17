@@ -17,6 +17,7 @@
 -(NSString *)spaceForRow:(NSInteger )row;
 -(NSString *)priceIncludeForRow:(NSInteger )row;
 -(NSArray *)imageurlForRow:(NSInteger )row;
+-(TuijianModel *)TuijianModelForRow:(NSInteger )row;
 @property (nonatomic)NSInteger page;
 
 

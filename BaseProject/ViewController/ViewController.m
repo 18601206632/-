@@ -11,6 +11,7 @@
 #import "ScrollDisplayViewController.h"
 #import "TuijianCell.h"
 #import "Factory.h"
+#import "TuijianDetailViewController.h"
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource,ScrollDisplayViewControllerDelegate>
 
 @property (nonatomic,strong)ScrollDisplayViewController *sdVC;
@@ -88,8 +89,11 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    TuijianDetailViewController *vc=[[TuijianDetailViewController alloc]initWithTuijianModel:[self.tuijianVM TuijianModelForRow:indexPath.row]];
+    [self.navigationController pushViewController:vc animated:YES];
 }
+
 
 -(ScrollDisplayViewController *)sdVC
 {

@@ -14,4 +14,5 @@
 +(id)getPage:(NSInteger)page kCompletionHandle;
 +(id)getActivityWithPage:(NSInteger)Page kCompletionHandle;
 +(id)getLingganWithPage:(NSInteger)Page kCompletionHandle;
++(id)getTuijianDetailId:(NSInteger )Id city:(NSString *)city kCompletionHandle;
 @end

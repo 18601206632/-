@@ -32,6 +32,10 @@
 		85057BB71BF0BBB100938DA1 /* PSCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85057BB21BF0BBB100938DA1 /* PSCollectionViewCell.m */; };
 		85057BB81BF0BBB100938DA1 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 85057BB31BF0BBB100938DA1 /* README.md */; };
 		85057BBB1BF0C77D00938DA1 /* PicListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85057BBA1BF0C77D00938DA1 /* PicListViewController.m */; };
+		8508C5451BFB222E006DBA04 /* TuijianDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8508C5441BFB222E006DBA04 /* TuijianDetailViewController.m */; };
+		8508C5491BFB2313006DBA04 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8508C5481BFB2313006DBA04 /* iCarousel.m */; };
+		8508C54F1BFB5CCC006DBA04 /* TuijianDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8508C54E1BFB5CCC006DBA04 /* TuijianDetailModel.m */; };
+		8508C5521BFB60A5006DBA04 /* TuijianDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8508C5511BFB60A5006DBA04 /* TuijianDetailViewModel.m */; };
 		85159A211BF0223C00927523 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85159A201BF0223C00927523 /* LeftViewController.m */; };
 		85159A241BF024D700927523 /* Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 85159A231BF024D700927523 /* Factory.m */; };
 		85159A301BF0616400927523 /* TuijianCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85159A2F1BF0616400927523 /* TuijianCell.m */; };
@@ -110,6 +114,14 @@
 		85057BB31BF0BBB100938DA1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		85057BB91BF0C77D00938DA1 /* PicListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicListViewController.h; sourceTree = "<group>"; };
 		85057BBA1BF0C77D00938DA1 /* PicListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicListViewController.m; sourceTree = "<group>"; };
+		8508C5431BFB222E006DBA04 /* TuijianDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TuijianDetailViewController.h; sourceTree = "<group>"; };
+		8508C5441BFB222E006DBA04 /* TuijianDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TuijianDetailViewController.m; sourceTree = "<group>"; };
+		8508C5471BFB2313006DBA04 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		8508C5481BFB2313006DBA04 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		8508C54D1BFB5CCC006DBA04 /* TuijianDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TuijianDetailModel.h; sourceTree = "<group>"; };
+		8508C54E1BFB5CCC006DBA04 /* TuijianDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TuijianDetailModel.m; sourceTree = "<group>"; };
+		8508C5501BFB60A5006DBA04 /* TuijianDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TuijianDetailViewModel.h; sourceTree = "<group>"; };
+		8508C5511BFB60A5006DBA04 /* TuijianDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TuijianDetailViewModel.m; sourceTree = "<group>"; };
 		85159A1F1BF0223C00927523 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
 		85159A201BF0223C00927523 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
 		85159A221BF024D700927523 /* Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Factory.h; sourceTree = "<group>"; };
@@ -358,6 +370,7 @@
 		85057BAC1BF0BBB100938DA1 /* PSCollectionView-master */ = {
 			isa = PBXGroup;
 			children = (
+				8508C5461BFB2313006DBA04 /* iCarousel */,
 				85057BAD1BF0BBB100938DA1 /* .gitignore */,
 				85057BAE1BF0BBB100938DA1 /* LICENSE */,
 				85057BAF1BF0BBB100938DA1 /* PSCollectionView.h */,
@@ -374,6 +387,8 @@
 			children = (
 				3835CFB51BD90E150024CA48 /* ViewController.h */,
 				3835CFB61BD90E150024CA48 /* ViewController.m */,
+				8508C5431BFB222E006DBA04 /* TuijianDetailViewController.h */,
+				8508C5441BFB222E006DBA04 /* TuijianDetailViewController.m */,
 			);
 			name = "推荐";
 			sourceTree = "<group>";
@@ -439,6 +454,8 @@
 			children = (
 				8560A0131BE79581009774AF /* TuijianModel.h */,
 				8560A0141BE79581009774AF /* TuijianModel.m */,
+				8508C54D1BFB5CCC006DBA04 /* TuijianDetailModel.h */,
+				8508C54E1BFB5CCC006DBA04 /* TuijianDetailModel.m */,
 			);
 			name = "推荐";
 			sourceTree = "<group>";
@@ -511,6 +528,8 @@
 			children = (
 				8560A0191BE79AB6009774AF /* TuijianViewModel.h */,
 				8560A01A1BE79AB6009774AF /* TuijianViewModel.m */,
+				8508C5501BFB60A5006DBA04 /* TuijianDetailViewModel.h */,
+				8508C5511BFB60A5006DBA04 /* TuijianDetailViewModel.m */,
 			);
 			name = "推荐";
 			sourceTree = "<group>";
@@ -585,6 +604,15 @@
 				85F1EA161BF9FDE200F2F3E5 /* LingganCell.m */,
 			);
 			name = "灵感";
+			sourceTree = "<group>";
+		};
+		8508C5461BFB2313006DBA04 /* iCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				8508C5471BFB2313006DBA04 /* iCarousel.h */,
+				8508C5481BFB2313006DBA04 /* iCarousel.m */,
+			);
+			path = iCarousel;
 			sourceTree = "<group>";
 		};
 		85F779001BE83D4300354BDA /* ScrollDisplay */ = {
@@ -740,6 +768,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8508C5521BFB60A5006DBA04 /* TuijianDetailViewModel.m in Sources */,
 				85057BBB1BF0C77D00938DA1 /* PicListViewController.m in Sources */,
 				85159A241BF024D700927523 /* Factory.m in Sources */,
 				85057BB61BF0BBB100938DA1 /* PSCollectionView.m in Sources */,
@@ -761,6 +790,7 @@
 				85F1E96D1BF969AA00F2F3E5 /* ActivityViewModel.m in Sources */,
 				85F1EA1D1BFA0F2300F2F3E5 /* BrandViewController.m in Sources */,
 				3835CFB71BD90E150024CA48 /* ViewController.m in Sources */,
+				8508C5491BFB2313006DBA04 /* iCarousel.m in Sources */,
 				85F1E9741BF97E2300F2F3E5 /* ActivityCell.m in Sources */,
 				8560A0151BE79581009774AF /* TuijianModel.m in Sources */,
 				855865991BF2135400C1D078 /* TRImageView.m in Sources */,
@@ -774,11 +804,13 @@
 				8560A0181BE796C6009774AF /* TuijianNetManager.m in Sources */,
 				3886C0C11BD74B090014E661 /* BaseModel.m in Sources */,
 				85057BAB1BF0B6A900938DA1 /* PicViewModel.m in Sources */,
+				8508C5451BFB222E006DBA04 /* TuijianDetailViewController.m in Sources */,
 				85D243661BF1B4CA0012F644 /* CompanyViewModel.m in Sources */,
 				85F1EA141BF9F12200F2F3E5 /* LingganVIewModel.m in Sources */,
 				3886C0981BD748830014E661 /* main.m in Sources */,
 				85F1EA111BF9DACF00F2F3E5 /* lingganModel.m in Sources */,
 				85F1E9671BF9662400F2F3E5 /* ActivityModel.m in Sources */,
+				8508C54F1BFB5CCC006DBA04 /* TuijianDetailModel.m in Sources */,
 				3804CE521BD758F10046C8C8 /* NSObject+Common.m in Sources */,
 				85D243601BF1B02E0012F644 /* companyModel.m in Sources */,
 				85F1EA171BF9FDE200F2F3E5 /* LingganCell.m in Sources */,
