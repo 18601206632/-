@@ -24,7 +24,7 @@
 @implementation LeftViewController
 -(NSArray *)itemNames
 {
-    return @[@"精选推荐",@"家居图库",@"免费方案",@"家装公司",@"品牌展厅",@"优选活动",@"灵感专题"];
+    return @[@"精选推荐",@"家居图库",@"免费方案",@"家装公司",@"品牌展厅",@"优选活动"];
 }
 -(UITableView *)tableView
 {
@@ -92,10 +92,10 @@ kRemoveCellSeparator
             [self.sideMenuViewController setContentViewController:[ActivityViewController defaultNavi] animated:YES];
             [self.sideMenuViewController hideMenuViewController];
             break;
-        case 6:
-            [self.sideMenuViewController setContentViewController:[LingganViewController defaultNavi] animated:YES];
-            [self.sideMenuViewController hideMenuViewController];
-            break;
+//        case 6:
+//            [self.sideMenuViewController setContentViewController:[LingganViewController defaultNavi] animated:YES];
+//            [self.sideMenuViewController hideMenuViewController];
+//            break;
         
             
         default:
