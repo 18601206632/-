@@ -6,7 +6,7 @@
 //  Copyright © 2015年 zhengjq. All rights reserved.
 //
 #import <UIKit/UIKit.h>
-
+#import "CompanyViewModel.h"
 @protocol CityListViewDelegate <NSObject>
 
 - (void)didClickedWithCityName:(NSString*)cityName;

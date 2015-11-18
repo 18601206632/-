@@ -44,7 +44,7 @@
         [_button setTitle:@"北京" forState:(UIControlStateNormal)];
         [_button bk_addEventHandler:^(id sender) {
             [self presentViewController:self.cityListView animated:YES completion:nil];
-            [self.tableView registerClass:[CompanyCell class] forCellReuseIdentifier:@"Cell"];
+//            [self.tableView registerClass:[CompanyCell class] forCellReuseIdentifier:@"Cell"];
             self.tableView.header=[MJRefreshNormalHeader headerWithRefreshingBlock:^{
                 [self.companyVM refreshDataCompletionHandle:^(NSError *error) {
                     [self.tableView reloadData];
@@ -61,8 +61,15 @@
 - (void)didClickedWithCityName:(NSString*)cityName
 {
     self.city=cityName;
+    self.companyVM.city=self.city;
     [self.button setTitle:self.city forState:UIControlStateNormal];
 }
+//-(void)didClickedWithCompanyViewModel:(CompanyViewModel *)companyVM cityName:(NSString *)cityName
+//{
+//    self.companyVM=companyVM;
+//    [self.tableView reloadData];
+//    [self.button setTitle:cityName forState:(UIControlStateNormal)];
+//}
 +(UINavigationController *)defaultNavi
 {
     static UINavigationController *navi=nil;

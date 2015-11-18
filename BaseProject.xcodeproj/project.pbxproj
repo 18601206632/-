@@ -55,6 +55,7 @@
 		851C35091BFC1D40007E461B /* CityItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 851C34F11BFC1D40007E461B /* CityItem.m */; };
 		851C350A1BFC1D40007E461B /* CityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 851C34F31BFC1D40007E461B /* CityListViewController.m */; };
 		851C35151BFC24EA007E461B /* citydict.plist in Resources */ = {isa = PBXBuildFile; fileRef = 851C35141BFC24EA007E461B /* citydict.plist */; };
+		851C351D1BFC7560007E461B /* CompanyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 851C351C1BFC7560007E461B /* CompanyDetailViewController.m */; };
 		855865991BF2135400C1D078 /* TRImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 855865981BF2135400C1D078 /* TRImageView.m */; };
 		8558659C1BF21AB200C1D078 /* CompanyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8558659B1BF21AB200C1D078 /* CompanyViewController.m */; };
 		8560A0151BE79581009774AF /* TuijianModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8560A0141BE79581009774AF /* TuijianModel.m */; };
@@ -169,6 +170,8 @@
 		851C34F21BFC1D40007E461B /* CityListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityListViewController.h; sourceTree = "<group>"; };
 		851C34F31BFC1D40007E461B /* CityListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityListViewController.m; sourceTree = "<group>"; };
 		851C35141BFC24EA007E461B /* citydict.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = citydict.plist; sourceTree = "<group>"; };
+		851C351B1BFC7560007E461B /* CompanyDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyDetailViewController.h; sourceTree = "<group>"; };
+		851C351C1BFC7560007E461B /* CompanyDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompanyDetailViewController.m; sourceTree = "<group>"; };
 		855865971BF2135400C1D078 /* TRImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRImageView.h; sourceTree = "<group>"; };
 		855865981BF2135400C1D078 /* TRImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRImageView.m; sourceTree = "<group>"; };
 		8558659A1BF21AB200C1D078 /* CompanyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyViewController.h; sourceTree = "<group>"; };
@@ -441,6 +444,8 @@
 			children = (
 				8558659A1BF21AB200C1D078 /* CompanyViewController.h */,
 				8558659B1BF21AB200C1D078 /* CompanyViewController.m */,
+				851C351B1BFC7560007E461B /* CompanyDetailViewController.h */,
+				851C351C1BFC7560007E461B /* CompanyDetailViewController.m */,
 			);
 			name = "公司";
 			sourceTree = "<group>";
@@ -884,6 +889,7 @@
 				85159A211BF0223C00927523 /* LeftViewController.m in Sources */,
 				851C34E11BFC1AFC007E461B /* ChineseInclude.m in Sources */,
 				85F1EA201BFA108D00F2F3E5 /* FreeViewController.m in Sources */,
+				851C351D1BFC7560007E461B /* CompanyDetailViewController.m in Sources */,
 				3886C0BB1BD74AE90014E661 /* BaseViewModel.m in Sources */,
 				85057BA21BF0A51000938DA1 /* PicViewController.m in Sources */,
 				8560A0181BE796C6009774AF /* TuijianNetManager.m in Sources */,
