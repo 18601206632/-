@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface CompanyViewController : UITableViewController
-@property (nonatomic,strong)NSString *city;
+
 
 +(UINavigationController *)defaultNavi;
 @end

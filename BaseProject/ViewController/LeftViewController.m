@@ -12,7 +12,7 @@
 #import "PicListViewController.h"
 #import "CompanyViewController.h"
 #import "ActivityViewController.h"
-#import "CityViewController.h"
+
 #import "LingganViewController.h"
 #import "FreeViewController.h"
 #import "BrandViewController.h"
@@ -40,6 +40,7 @@
             make.left.mas_equalTo(0);
             make.centerY.mas_equalTo(0);
         }];
+        _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
         
     }
     return _tableView;
@@ -113,6 +114,8 @@ kRemoveCellSeparator
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.tableView reloadData];
+    
+    
     // Do any additional setup after loading the view.
 }
 

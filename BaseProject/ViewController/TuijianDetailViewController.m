@@ -27,7 +27,7 @@
 -(TuijianDetailViewModel *)detailVm
 {
     if (!_detailVm) {
-        _detailVm=[[TuijianDetailViewModel alloc]initWithId:self.Model.ID city:@"上海"];
+        _detailVm=[[TuijianDetailViewModel alloc]initWithId:self.Model.ID city:_city];
     }
     return _detailVm;
 }
@@ -178,6 +178,17 @@
     [self.detailVm getDataFromNetCompleteHandle:^(NSError *error) {
         [self.tableView reloadData];
     }];
+    UIView *view=[[UIView alloc]initWithFrame:CGRectMake(0, 0, kWindowW, 100)];
+    UIImageView *imageView=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"index_none"]];
+    [view addSubview:imageView];
+    [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.mas_equalTo(0);
+        
+        make.size.mas_equalTo(CGSizeMake(60, 60));
+    }];
+    self.tableView.tableFooterView=view;
+    
+    
     // Do any additional setup after loading the view.
 }
 

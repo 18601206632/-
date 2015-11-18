@@ -10,13 +10,59 @@
 #import "CompanyCell.h"
 #import "CompanyViewModel.h"
 #import "Factory.h"
-@interface CompanyViewController ()
+#import "CityListViewController.h"
+
+@interface CompanyViewController ()<CityListViewDelegate>
 @property (nonatomic,strong)CompanyViewModel *companyVM;
-
-
+@property (nonatomic,strong)NSString *city;
+@property (nonatomic,strong)CityListViewController *cityListView;
+@property (nonatomic,strong)UIButton *button;
 @end
 
 @implementation CompanyViewController
+-(CityListViewController *)cityListView
+{
+    if (!_cityListView) {
+        _cityListView = [[CityListViewController alloc]init];
+        _cityListView.delegate = self;
+        //热门城市列表
+        _cityListView.arrayHotCity = [NSMutableArray arrayWithObjects:@"广州",@"北京",@"天津",@"厦门",@"重庆",@"沈阳",@"济南",@"深圳",@"长沙",@"无锡", nil];
+        //历史选择城市列表
+        _cityListView.arrayHistoricalCity = [NSMutableArray arrayWithObjects:@"北京",@"上海",@"广州", nil];
+        //定位城市列表
+        _cityListView.arrayLocatingCity   = [NSMutableArray arrayWithObjects:@"北京", nil];
+    }
+    return _cityListView;
+}
+-(UIButton *)button
+{
+    if (!_button) {
+        _button=[UIButton buttonWithType:UIButtonTypeCustom];
+        _button.backgroundColor=[UIColor orangeColor];
+        _button.frame=CGRectMake(0, 0, 55, 30);
+        self.city=@"北京";
+        [_button setTitle:@"北京" forState:(UIControlStateNormal)];
+        [_button bk_addEventHandler:^(id sender) {
+            [self presentViewController:self.cityListView animated:YES completion:nil];
+            [self.tableView registerClass:[CompanyCell class] forCellReuseIdentifier:@"Cell"];
+            self.tableView.header=[MJRefreshNormalHeader headerWithRefreshingBlock:^{
+                [self.companyVM refreshDataCompletionHandle:^(NSError *error) {
+                    [self.tableView reloadData];
+                    [self.tableView.header endRefreshing];
+                }];
+            }];
+            [self.tableView.header beginRefreshing];
+            
+        } forControlEvents:(UIControlEventTouchUpInside)];
+        
+    }
+    return _button;
+}
+- (void)didClickedWithCityName:(NSString*)cityName
+{
+    self.city=cityName;
+    [self.button setTitle:self.city forState:UIControlStateNormal];
+}
 +(UINavigationController *)defaultNavi
 {
     static UINavigationController *navi=nil;
@@ -30,7 +76,7 @@
 -(CompanyViewModel *)companyVM
 {
     if (!_companyVM) {
-        _companyVM=[[CompanyViewModel alloc]initWithCity:@"北京"];
+        _companyVM=[[CompanyViewModel alloc]initWithCity:self.city];
         
     }
     return _companyVM;
@@ -56,6 +102,10 @@
             [self.tableView.footer endRefreshing];
         }];
     }];
+    UIBarButtonItem *barbtn=[[UIBarButtonItem alloc]initWithCustomView:self.button];
+    UIBarButtonItem *spaceItem=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:(UIBarButtonSystemItemFixedSpace) target:nil action:nil];
+    spaceItem.width=-10;
+    self.navigationItem.rightBarButtonItems=@[barbtn,spaceItem];
 //    UIButton *btn=[UIButton new];
     
     

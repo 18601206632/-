@@ -12,16 +12,54 @@
 #import "TuijianCell.h"
 #import "Factory.h"
 #import "TuijianDetailViewController.h"
-@interface ViewController ()<UITableViewDelegate,UITableViewDataSource,ScrollDisplayViewControllerDelegate>
+#import "CityListViewController.h"
+@interface ViewController ()<UITableViewDelegate,UITableViewDataSource,ScrollDisplayViewControllerDelegate,CityListViewDelegate>
 
 @property (nonatomic,strong)ScrollDisplayViewController *sdVC;
 @property (nonatomic,strong)TuijianViewModel *tuijianVM;
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)NSArray *imageUrls;
-
+@property (nonatomic,strong)CityListViewController *cityListView;
+@property (nonatomic,strong)UIButton *button;
+@property (nonatomic,strong)NSString *city;
 @end
 
 @implementation ViewController
+-(CityListViewController *)cityListView
+{
+    if (!_cityListView) {
+        _cityListView = [[CityListViewController alloc]init];
+        _cityListView.delegate = self;
+        //热门城市列表
+        _cityListView.arrayHotCity = [NSMutableArray arrayWithObjects:@"广州",@"北京",@"天津",@"厦门",@"重庆",@"沈阳",@"济南",@"深圳",@"长沙",@"无锡", nil];
+        //历史选择城市列表
+        _cityListView.arrayHistoricalCity = [NSMutableArray arrayWithObjects:@"北京",@"上海",@"广州", nil];
+        //定位城市列表
+        _cityListView.arrayLocatingCity   = [NSMutableArray arrayWithObjects:@"北京", nil];
+    }
+    return _cityListView;
+}
+-(UIButton *)button
+{
+    if (!_button) {
+        _button=[UIButton buttonWithType:UIButtonTypeCustom];
+        _button.backgroundColor=[UIColor orangeColor];
+        _button.frame=CGRectMake(0, 0, 55, 30);
+        self.city=@"北京";
+        [_button setTitle:@"北京" forState:(UIControlStateNormal)];
+        [_button bk_addEventHandler:^(id sender) {
+            [self presentViewController:self.cityListView animated:YES completion:nil];
+            
+        } forControlEvents:(UIControlEventTouchUpInside)];
+        
+    }
+    return _button;
+}
+- (void)didClickedWithCityName:(NSString*)cityName
+{
+    self.city=cityName;
+    [self.button setTitle:cityName forState:UIControlStateNormal];
+}
 +(UINavigationController *)defualtNavi
 {
     static UINavigationController *navi=nil;
@@ -91,6 +129,7 @@
 {
 //    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     TuijianDetailViewController *vc=[[TuijianDetailViewController alloc]initWithTuijianModel:[self.tuijianVM TuijianModelForRow:indexPath.row]];
+    vc.city=self.city;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -137,6 +176,11 @@
     }];
 //    self.view.backgroundColor=[UIColor redColor];
     [Factory addMenuItemToVc:self];
+    
+    UIBarButtonItem *barbtn=[[UIBarButtonItem alloc]initWithCustomView:self.button];
+    UIBarButtonItem *spaceItem=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:(UIBarButtonSystemItemFixedSpace) target:nil action:nil];
+    spaceItem.width=-10;
+    self.navigationItem.rightBarButtonItems=@[barbtn,spaceItem];
 }
 
 - (void)didReceiveMemoryWarning {

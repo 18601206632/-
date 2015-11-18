@@ -15,7 +15,7 @@
         _iconIv.layer.cornerRadius=60/2;
         [self.contentView addSubview:_iconIv];
         [_iconIv mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.center.mas_equalTo(0);
+            make.centerX.mas_equalTo(0);
             make.top.mas_equalTo(20);
             make.size.mas_equalTo(CGSizeMake(60, 60));
         }];
@@ -33,7 +33,7 @@
         [self.contentView addSubview:_companyNameLb];
         [_companyNameLb mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.iconIv.mas_bottom).mas_equalTo(20);
-            make.center.mas_equalTo(0);
+            make.centerX.mas_equalTo(0);
             
         }];
     }
@@ -48,7 +48,7 @@
         [self.contentView addSubview:_areaDetailLb];
         [_areaDetailLb mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.companyNameLb.mas_bottom).mas_equalTo(20);
-            make.center.mas_equalTo(0);
+            make.centerX.mas_equalTo(0);
             make.bottom.mas_equalTo(-10);
         }];
     }

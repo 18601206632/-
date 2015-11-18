@@ -40,15 +40,26 @@
 		85159A211BF0223C00927523 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85159A201BF0223C00927523 /* LeftViewController.m */; };
 		85159A241BF024D700927523 /* Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 85159A231BF024D700927523 /* Factory.m */; };
 		85159A301BF0616400927523 /* TuijianCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85159A2F1BF0616400927523 /* TuijianCell.m */; };
+		851C34E11BFC1AFC007E461B /* ChineseInclude.m in Sources */ = {isa = PBXBuildFile; fileRef = 851C34D11BFC1AFC007E461B /* ChineseInclude.m */; };
+		851C34E21BFC1AFC007E461B /* ChineseToPinyinResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 851C34D31BFC1AFC007E461B /* ChineseToPinyinResource.m */; };
+		851C34E31BFC1AFC007E461B /* HanyuPinyinOutputFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 851C34D51BFC1AFC007E461B /* HanyuPinyinOutputFormat.m */; };
+		851C34E41BFC1AFC007E461B /* NSString+PinYin4Cocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = 851C34D71BFC1AFC007E461B /* NSString+PinYin4Cocoa.m */; };
+		851C34E51BFC1AFC007E461B /* PinyinFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 851C34D91BFC1AFC007E461B /* PinyinFormatter.m */; };
+		851C34E61BFC1AFC007E461B /* PinYinForObjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 851C34DB1BFC1AFC007E461B /* PinYinForObjc.m */; };
+		851C34E71BFC1AFC007E461B /* PinyinHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 851C34DD1BFC1AFC007E461B /* PinyinHelper.m */; };
+		851C34E81BFC1AFC007E461B /* unicode_to_hanyu_pinyin.txt in Resources */ = {isa = PBXBuildFile; fileRef = 851C34DE1BFC1AFC007E461B /* unicode_to_hanyu_pinyin.txt */; };
+		851C34E91BFC1AFC007E461B /* ZYPinYinSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 851C34E01BFC1AFC007E461B /* ZYPinYinSearch.m */; };
+		851C35061BFC1D40007E461B /* ButtonGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 851C34EC1BFC1D40007E461B /* ButtonGroupView.m */; };
+		851C35071BFC1D40007E461B /* CityButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 851C34EE1BFC1D40007E461B /* CityButton.m */; };
+		851C35081BFC1D40007E461B /* citydict.plist in Resources */ = {isa = PBXBuildFile; fileRef = 851C34EF1BFC1D40007E461B /* citydict.plist */; };
+		851C35091BFC1D40007E461B /* CityItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 851C34F11BFC1D40007E461B /* CityItem.m */; };
+		851C350A1BFC1D40007E461B /* CityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 851C34F31BFC1D40007E461B /* CityListViewController.m */; };
+		851C35151BFC24EA007E461B /* citydict.plist in Resources */ = {isa = PBXBuildFile; fileRef = 851C35141BFC24EA007E461B /* citydict.plist */; };
 		855865991BF2135400C1D078 /* TRImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 855865981BF2135400C1D078 /* TRImageView.m */; };
 		8558659C1BF21AB200C1D078 /* CompanyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8558659B1BF21AB200C1D078 /* CompanyViewController.m */; };
 		8560A0151BE79581009774AF /* TuijianModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8560A0141BE79581009774AF /* TuijianModel.m */; };
 		8560A0181BE796C6009774AF /* TuijianNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8560A0171BE796C6009774AF /* TuijianNetManager.m */; };
 		8560A01B1BE79AB6009774AF /* TuijianViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8560A01A1BE79AB6009774AF /* TuijianViewModel.m */; };
-		85C9459A1BF3713600EBBA52 /* CityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C945991BF3713600EBBA52 /* CityViewController.m */; };
-		85C9459F1BF376E600EBBA52 /* CityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C9459E1BF376E600EBBA52 /* CityModel.m */; };
-		85C945A11BF37B5F00EBBA52 /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85C945A01BF37B5F00EBBA52 /* area.plist */; };
-		85C945A31BF37E2A00EBBA52 /* citydict.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85C945A21BF37E2A00EBBA52 /* citydict.plist */; };
 		85D243601BF1B02E0012F644 /* companyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D2435F1BF1B02E0012F644 /* companyModel.m */; };
 		85D243631BF1B2090012F644 /* companyNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D243621BF1B2090012F644 /* companyNetManager.m */; };
 		85D243661BF1B4CA0012F644 /* CompanyViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D243651BF1B4CA0012F644 /* CompanyViewModel.m */; };
@@ -131,6 +142,33 @@
 		85159A231BF024D700927523 /* Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Factory.m; sourceTree = "<group>"; };
 		85159A2E1BF0616400927523 /* TuijianCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TuijianCell.h; sourceTree = "<group>"; };
 		85159A2F1BF0616400927523 /* TuijianCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TuijianCell.m; sourceTree = "<group>"; };
+		851C34D01BFC1AFC007E461B /* ChineseInclude.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseInclude.h; sourceTree = "<group>"; };
+		851C34D11BFC1AFC007E461B /* ChineseInclude.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseInclude.m; sourceTree = "<group>"; };
+		851C34D21BFC1AFC007E461B /* ChineseToPinyinResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseToPinyinResource.h; sourceTree = "<group>"; };
+		851C34D31BFC1AFC007E461B /* ChineseToPinyinResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseToPinyinResource.m; sourceTree = "<group>"; };
+		851C34D41BFC1AFC007E461B /* HanyuPinyinOutputFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HanyuPinyinOutputFormat.h; sourceTree = "<group>"; };
+		851C34D51BFC1AFC007E461B /* HanyuPinyinOutputFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HanyuPinyinOutputFormat.m; sourceTree = "<group>"; };
+		851C34D61BFC1AFC007E461B /* NSString+PinYin4Cocoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PinYin4Cocoa.h"; sourceTree = "<group>"; };
+		851C34D71BFC1AFC007E461B /* NSString+PinYin4Cocoa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PinYin4Cocoa.m"; sourceTree = "<group>"; };
+		851C34D81BFC1AFC007E461B /* PinyinFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinyinFormatter.h; sourceTree = "<group>"; };
+		851C34D91BFC1AFC007E461B /* PinyinFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinyinFormatter.m; sourceTree = "<group>"; };
+		851C34DA1BFC1AFC007E461B /* PinYinForObjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinYinForObjc.h; sourceTree = "<group>"; };
+		851C34DB1BFC1AFC007E461B /* PinYinForObjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinYinForObjc.m; sourceTree = "<group>"; };
+		851C34DC1BFC1AFC007E461B /* PinyinHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinyinHelper.h; sourceTree = "<group>"; };
+		851C34DD1BFC1AFC007E461B /* PinyinHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinyinHelper.m; sourceTree = "<group>"; };
+		851C34DE1BFC1AFC007E461B /* unicode_to_hanyu_pinyin.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = unicode_to_hanyu_pinyin.txt; sourceTree = "<group>"; };
+		851C34DF1BFC1AFC007E461B /* ZYPinYinSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYPinYinSearch.h; sourceTree = "<group>"; };
+		851C34E01BFC1AFC007E461B /* ZYPinYinSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYPinYinSearch.m; sourceTree = "<group>"; };
+		851C34EB1BFC1D40007E461B /* ButtonGroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonGroupView.h; sourceTree = "<group>"; };
+		851C34EC1BFC1D40007E461B /* ButtonGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonGroupView.m; sourceTree = "<group>"; };
+		851C34ED1BFC1D40007E461B /* CityButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityButton.h; sourceTree = "<group>"; };
+		851C34EE1BFC1D40007E461B /* CityButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityButton.m; sourceTree = "<group>"; };
+		851C34EF1BFC1D40007E461B /* citydict.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = citydict.plist; sourceTree = "<group>"; };
+		851C34F01BFC1D40007E461B /* CityItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityItem.h; sourceTree = "<group>"; };
+		851C34F11BFC1D40007E461B /* CityItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityItem.m; sourceTree = "<group>"; };
+		851C34F21BFC1D40007E461B /* CityListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityListViewController.h; sourceTree = "<group>"; };
+		851C34F31BFC1D40007E461B /* CityListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityListViewController.m; sourceTree = "<group>"; };
+		851C35141BFC24EA007E461B /* citydict.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = citydict.plist; sourceTree = "<group>"; };
 		855865971BF2135400C1D078 /* TRImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRImageView.h; sourceTree = "<group>"; };
 		855865981BF2135400C1D078 /* TRImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRImageView.m; sourceTree = "<group>"; };
 		8558659A1BF21AB200C1D078 /* CompanyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyViewController.h; sourceTree = "<group>"; };
@@ -141,12 +179,6 @@
 		8560A0171BE796C6009774AF /* TuijianNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TuijianNetManager.m; sourceTree = "<group>"; };
 		8560A0191BE79AB6009774AF /* TuijianViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TuijianViewModel.h; sourceTree = "<group>"; };
 		8560A01A1BE79AB6009774AF /* TuijianViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TuijianViewModel.m; sourceTree = "<group>"; };
-		85C945981BF3713600EBBA52 /* CityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityViewController.h; sourceTree = "<group>"; };
-		85C945991BF3713600EBBA52 /* CityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityViewController.m; sourceTree = "<group>"; };
-		85C9459D1BF376E600EBBA52 /* CityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityModel.h; sourceTree = "<group>"; };
-		85C9459E1BF376E600EBBA52 /* CityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityModel.m; sourceTree = "<group>"; };
-		85C945A01BF37B5F00EBBA52 /* area.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = area.plist; sourceTree = "<group>"; };
-		85C945A21BF37E2A00EBBA52 /* citydict.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = citydict.plist; sourceTree = "<group>"; };
 		85D2435E1BF1B02E0012F644 /* companyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = companyModel.h; sourceTree = "<group>"; };
 		85D2435F1BF1B02E0012F644 /* companyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = companyModel.m; sourceTree = "<group>"; };
 		85D243611BF1B2090012F644 /* companyNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = companyNetManager.h; sourceTree = "<group>"; };
@@ -230,6 +262,7 @@
 		3886C0951BD748830014E661 /* BaseProject */ = {
 			isa = PBXGroup;
 			children = (
+				851C34EA1BFC1D40007E461B /* ChinaCityList */,
 				3886C0AF1BD74A4A0014E661 /* Define */,
 				3886C0B01BD74A4A0014E661 /* Model */,
 				3886C0B11BD74A4A0014E661 /* NetManager */,
@@ -273,8 +306,6 @@
 				8508C5321BFB1F42006DBA04 /* 推荐 */,
 				3886C0BF1BD74B090014E661 /* BaseModel.h */,
 				3886C0C01BD74B090014E661 /* BaseModel.m */,
-				85C9459D1BF376E600EBBA52 /* CityModel.h */,
-				85C9459E1BF376E600EBBA52 /* CityModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -294,9 +325,8 @@
 		3886C0B21BD74A4A0014E661 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				85C945A01BF37B5F00EBBA52 /* area.plist */,
-				85C945A21BF37E2A00EBBA52 /* citydict.plist */,
 				85F1E9C61BF9CE7900F2F3E5 /* city.plist */,
+				851C35141BFC24EA007E461B /* citydict.plist */,
 				3886C0A21BD748830014E661 /* Assets.xcassets */,
 				3886C0AD1BD749A00014E661 /* LaunchScreen.xib */,
 				3886C09F1BD748830014E661 /* Main.storyboard */,
@@ -319,6 +349,7 @@
 		3886C0B41BD74A4A0014E661 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				851C34CF1BFC1AFC007E461B /* ZYPinYinSearchLib */,
 				85057BAC1BF0BBB100938DA1 /* PSCollectionView-master */,
 			);
 			path = Vendor;
@@ -349,8 +380,6 @@
 				8508C52B1BFB161A006DBA04 /* 推荐 */,
 				85159A1F1BF0223C00927523 /* LeftViewController.h */,
 				85159A201BF0223C00927523 /* LeftViewController.m */,
-				85C945981BF3713600EBBA52 /* CityViewController.h */,
-				85C945991BF3713600EBBA52 /* CityViewController.m */,
 			);
 			name = ViewController;
 			path = BaseProject/ViewController;
@@ -620,6 +649,46 @@
 			path = iCarousel;
 			sourceTree = "<group>";
 		};
+		851C34CF1BFC1AFC007E461B /* ZYPinYinSearchLib */ = {
+			isa = PBXGroup;
+			children = (
+				851C34D01BFC1AFC007E461B /* ChineseInclude.h */,
+				851C34D11BFC1AFC007E461B /* ChineseInclude.m */,
+				851C34D21BFC1AFC007E461B /* ChineseToPinyinResource.h */,
+				851C34D31BFC1AFC007E461B /* ChineseToPinyinResource.m */,
+				851C34D41BFC1AFC007E461B /* HanyuPinyinOutputFormat.h */,
+				851C34D51BFC1AFC007E461B /* HanyuPinyinOutputFormat.m */,
+				851C34D61BFC1AFC007E461B /* NSString+PinYin4Cocoa.h */,
+				851C34D71BFC1AFC007E461B /* NSString+PinYin4Cocoa.m */,
+				851C34D81BFC1AFC007E461B /* PinyinFormatter.h */,
+				851C34D91BFC1AFC007E461B /* PinyinFormatter.m */,
+				851C34DA1BFC1AFC007E461B /* PinYinForObjc.h */,
+				851C34DB1BFC1AFC007E461B /* PinYinForObjc.m */,
+				851C34DC1BFC1AFC007E461B /* PinyinHelper.h */,
+				851C34DD1BFC1AFC007E461B /* PinyinHelper.m */,
+				851C34DE1BFC1AFC007E461B /* unicode_to_hanyu_pinyin.txt */,
+				851C34DF1BFC1AFC007E461B /* ZYPinYinSearch.h */,
+				851C34E01BFC1AFC007E461B /* ZYPinYinSearch.m */,
+			);
+			path = ZYPinYinSearchLib;
+			sourceTree = "<group>";
+		};
+		851C34EA1BFC1D40007E461B /* ChinaCityList */ = {
+			isa = PBXGroup;
+			children = (
+				851C34EB1BFC1D40007E461B /* ButtonGroupView.h */,
+				851C34EC1BFC1D40007E461B /* ButtonGroupView.m */,
+				851C34ED1BFC1D40007E461B /* CityButton.h */,
+				851C34EE1BFC1D40007E461B /* CityButton.m */,
+				851C34EF1BFC1D40007E461B /* citydict.plist */,
+				851C34F01BFC1D40007E461B /* CityItem.h */,
+				851C34F11BFC1D40007E461B /* CityItem.m */,
+				851C34F21BFC1D40007E461B /* CityListViewController.h */,
+				851C34F31BFC1D40007E461B /* CityListViewController.m */,
+			);
+			path = ChinaCityList;
+			sourceTree = "<group>";
+		};
 		85F779001BE83D4300354BDA /* ScrollDisplay */ = {
 			isa = PBXGroup;
 			children = (
@@ -708,13 +777,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				85057BB41BF0BBB100938DA1 /* .gitignore in Resources */,
+				851C35151BFC24EA007E461B /* citydict.plist in Resources */,
+				851C34E81BFC1AFC007E461B /* unicode_to_hanyu_pinyin.txt in Resources */,
 				3886C0A31BD748830014E661 /* Assets.xcassets in Resources */,
 				3886C0AE1BD749A00014E661 /* LaunchScreen.xib in Resources */,
 				3886C0A11BD748830014E661 /* Main.storyboard in Resources */,
+				851C35081BFC1D40007E461B /* citydict.plist in Resources */,
 				85057BB51BF0BBB100938DA1 /* LICENSE in Resources */,
 				85F1E9C71BF9CE7900F2F3E5 /* city.plist in Resources */,
-				85C945A11BF37B5F00EBBA52 /* area.plist in Resources */,
-				85C945A31BF37E2A00EBBA52 /* citydict.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -773,24 +843,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				851C34E71BFC1AFC007E461B /* PinyinHelper.m in Sources */,
 				8508C5521BFB60A5006DBA04 /* TuijianDetailViewModel.m in Sources */,
 				85057BBB1BF0C77D00938DA1 /* PicListViewController.m in Sources */,
 				85159A241BF024D700927523 /* Factory.m in Sources */,
 				85057BB61BF0BBB100938DA1 /* PSCollectionView.m in Sources */,
 				3886C0BE1BD74AFE0014E661 /* BaseNetManager.m in Sources */,
 				8560A01B1BE79AB6009774AF /* TuijianViewModel.m in Sources */,
+				851C34E21BFC1AFC007E461B /* ChineseToPinyinResource.m in Sources */,
+				851C35061BFC1D40007E461B /* ButtonGroupView.m in Sources */,
+				851C35071BFC1D40007E461B /* CityButton.m in Sources */,
 				85159A301BF0616400927523 /* TuijianCell.m in Sources */,
 				8558659C1BF21AB200C1D078 /* CompanyViewController.m in Sources */,
-				85C9459A1BF3713600EBBA52 /* CityViewController.m in Sources */,
+				851C35091BFC1D40007E461B /* CityItem.m in Sources */,
 				85057BA81BF0AD3D00938DA1 /* PicNetManager.m in Sources */,
+				851C34E61BFC1AFC007E461B /* PinYinForObjc.m in Sources */,
+				851C34E51BFC1AFC007E461B /* PinyinFormatter.m in Sources */,
 				85057BB81BF0BBB100938DA1 /* README.md in Sources */,
+				851C34E41BFC1AFC007E461B /* NSString+PinYin4Cocoa.m in Sources */,
+				851C350A1BFC1D40007E461B /* CityListViewController.m in Sources */,
 				85F779031BE83D4300354BDA /* ScrollDisplayViewController.m in Sources */,
 				3804CE541BD758F10046C8C8 /* NSString+QRCode.m in Sources */,
 				85057BA51BF0AA5200938DA1 /* PicModel.m in Sources */,
 				3804CE531BD758F10046C8C8 /* NSString+PJR.m in Sources */,
 				3886C09B1BD748830014E661 /* AppDelegate.m in Sources */,
 				85057BB71BF0BBB100938DA1 /* PSCollectionViewCell.m in Sources */,
-				85C9459F1BF376E600EBBA52 /* CityModel.m in Sources */,
 				85F1E9711BF971AC00F2F3E5 /* ActivityViewController.m in Sources */,
 				85F1E96D1BF969AA00F2F3E5 /* ActivityViewModel.m in Sources */,
 				85F1EA1D1BFA0F2300F2F3E5 /* BrandViewController.m in Sources */,
@@ -798,12 +875,14 @@
 				3835CFB71BD90E150024CA48 /* ViewController.m in Sources */,
 				8508C5491BFB2313006DBA04 /* iCarousel.m in Sources */,
 				85F1E9741BF97E2300F2F3E5 /* ActivityCell.m in Sources */,
+				851C34E91BFC1AFC007E461B /* ZYPinYinSearch.m in Sources */,
 				8560A0151BE79581009774AF /* TuijianModel.m in Sources */,
 				855865991BF2135400C1D078 /* TRImageView.m in Sources */,
 				85D243691BF1B5F70012F644 /* CompanyCell.m in Sources */,
 				85D243631BF1B2090012F644 /* companyNetManager.m in Sources */,
 				3804CE511BD758F10046C8C8 /* AppDelegate+Category.m in Sources */,
 				85159A211BF0223C00927523 /* LeftViewController.m in Sources */,
+				851C34E11BFC1AFC007E461B /* ChineseInclude.m in Sources */,
 				85F1EA201BFA108D00F2F3E5 /* FreeViewController.m in Sources */,
 				3886C0BB1BD74AE90014E661 /* BaseViewModel.m in Sources */,
 				85057BA21BF0A51000938DA1 /* PicViewController.m in Sources */,
@@ -818,6 +897,7 @@
 				85F1E9671BF9662400F2F3E5 /* ActivityModel.m in Sources */,
 				8508C54F1BFB5CCC006DBA04 /* TuijianDetailModel.m in Sources */,
 				3804CE521BD758F10046C8C8 /* NSObject+Common.m in Sources */,
+				851C34E31BFC1AFC007E461B /* HanyuPinyinOutputFormat.m in Sources */,
 				85D243601BF1B02E0012F644 /* companyModel.m in Sources */,
 				85F1EA171BF9FDE200F2F3E5 /* LingganCell.m in Sources */,
 				85F1EA1A1BFA04C200F2F3E5 /* LingganViewController.m in Sources */,

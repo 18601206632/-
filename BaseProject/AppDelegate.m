@@ -46,7 +46,11 @@
 {
     if (!_sideMenu) {
         _sideMenu=[[RESideMenu alloc]initWithContentViewController:[ViewController defualtNavi] leftMenuViewController:[LeftViewController new] rightMenuViewController:nil];
+        _sideMenu.backgroundImage=[UIImage imageNamed:@"Introduce-Image-2"];
         _sideMenu.menuPrefersStatusBarHidden=YES;
+        
+        //不允许菜单栏到了边缘还可以继续缩小
+        _sideMenu.bouncesHorizontally = NO;
     }
     return _sideMenu;
 }

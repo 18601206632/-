@@ -12,4 +12,5 @@
 @interface TuijianDetailViewController : UIViewController
 @property (nonatomic,strong)TuijianModel *Model;
 -(instancetype)initWithTuijianModel:(TuijianModel *)model;
+@property (nonatomic,strong)NSString *city;
 @end
