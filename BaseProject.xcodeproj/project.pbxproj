@@ -56,6 +56,7 @@
 		851C350A1BFC1D40007E461B /* CityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 851C34F31BFC1D40007E461B /* CityListViewController.m */; };
 		851C35151BFC24EA007E461B /* citydict.plist in Resources */ = {isa = PBXBuildFile; fileRef = 851C35141BFC24EA007E461B /* citydict.plist */; };
 		851C351D1BFC7560007E461B /* CompanyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 851C351C1BFC7560007E461B /* CompanyDetailViewController.m */; };
+		851C35201BFCAD07007E461B /* ActivityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 851C351F1BFCAD07007E461B /* ActivityDetailViewController.m */; };
 		855865991BF2135400C1D078 /* TRImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 855865981BF2135400C1D078 /* TRImageView.m */; };
 		8558659C1BF21AB200C1D078 /* CompanyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8558659B1BF21AB200C1D078 /* CompanyViewController.m */; };
 		8560A0151BE79581009774AF /* TuijianModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8560A0141BE79581009774AF /* TuijianModel.m */; };
@@ -172,6 +173,8 @@
 		851C35141BFC24EA007E461B /* citydict.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = citydict.plist; sourceTree = "<group>"; };
 		851C351B1BFC7560007E461B /* CompanyDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyDetailViewController.h; sourceTree = "<group>"; };
 		851C351C1BFC7560007E461B /* CompanyDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompanyDetailViewController.m; sourceTree = "<group>"; };
+		851C351E1BFCAD07007E461B /* ActivityDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityDetailViewController.h; sourceTree = "<group>"; };
+		851C351F1BFCAD07007E461B /* ActivityDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityDetailViewController.m; sourceTree = "<group>"; };
 		855865971BF2135400C1D078 /* TRImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRImageView.h; sourceTree = "<group>"; };
 		855865981BF2135400C1D078 /* TRImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRImageView.m; sourceTree = "<group>"; };
 		8558659A1BF21AB200C1D078 /* CompanyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyViewController.h; sourceTree = "<group>"; };
@@ -455,6 +458,8 @@
 			children = (
 				85F1E96F1BF971AC00F2F3E5 /* ActivityViewController.h */,
 				85F1E9701BF971AC00F2F3E5 /* ActivityViewController.m */,
+				851C351E1BFCAD07007E461B /* ActivityDetailViewController.h */,
+				851C351F1BFCAD07007E461B /* ActivityDetailViewController.m */,
 			);
 			name = "活动";
 			sourceTree = "<group>";
@@ -872,6 +877,7 @@
 				85057BA51BF0AA5200938DA1 /* PicModel.m in Sources */,
 				3804CE531BD758F10046C8C8 /* NSString+PJR.m in Sources */,
 				3886C09B1BD748830014E661 /* AppDelegate.m in Sources */,
+				851C35201BFCAD07007E461B /* ActivityDetailViewController.m in Sources */,
 				85057BB71BF0BBB100938DA1 /* PSCollectionViewCell.m in Sources */,
 				85F1E9711BF971AC00F2F3E5 /* ActivityViewController.m in Sources */,
 				85F1E96D1BF969AA00F2F3E5 /* ActivityViewModel.m in Sources */,

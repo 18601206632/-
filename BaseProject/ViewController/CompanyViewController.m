@@ -84,7 +84,7 @@
 -(CompanyViewModel *)companyVM
 {
     if (!_companyVM) {
-        _companyVM=[[CompanyViewModel alloc]initWithCity:@"上海"];
+        _companyVM=[[CompanyViewModel alloc]initWithCity:self.city];
         
     }
     return _companyVM;
@@ -164,7 +164,7 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CompanyDetailViewController *vc=[[CompanyDetailViewController alloc]initWithCompanyModel:[self.companyVM modelForRow:indexPath.row]];
+    CompanyDetailViewController *vc=[[CompanyDetailViewController alloc]initWithCompanyModel:[self.companyVM modelForRow:indexPath.section]];
     [self.navigationController pushViewController:vc animated:YES];
 }
 /*

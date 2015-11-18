@@ -10,6 +10,7 @@
 #import "ActivityViewModel.h"
 #import "ActivityCell.h"
 #import "Factory.h"
+#import "ActivityDetailViewController.h"
 
 @interface ActivityViewController ()
 @property (nonatomic,strong)ActivityViewModel *ActivityVM;
@@ -89,6 +90,12 @@
 -(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return UITableViewAutomaticDimension;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ActivityDetailViewController *vc=[[ActivityDetailViewController alloc]initWithModel:[self.ActivityVM modelForRow:indexPath.row]];
+    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 /*
 // Override to support conditional editing of the table view.

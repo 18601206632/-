@@ -16,5 +16,5 @@
 -(NSURL *)iconForRow:(NSInteger)row;
 @property (nonatomic) NSInteger page;
 -(BOOL)containType:(NSInteger)row;
-
+-(ActivityModel *)modelForRow:(NSInteger)row;
 @end
