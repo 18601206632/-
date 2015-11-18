@@ -8,6 +8,7 @@
 
 #import "BrandViewController.h"
 #import "Factory.h"
+#import "BrandDetailViewController.h"
 @interface BrandViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 @property (nonatomic,strong)UICollectionView *collectionView;
 @property (nonatomic,strong)NSArray *brands;
@@ -28,7 +29,7 @@
 
 -(NSArray *)brands
 {
-    return @[@"brand-1",@"brand-3",@"brand-4",@"brand-5",@"brand-7",@"logo_1",@"logo_2",@"logo_3",@"logo_4",@"logo_5",@"logo_6",@"logo_7",@"logo_8",@"logo_9"];
+    return @[@"brand-1",@"brand-3",@"brand-4",@"logo_5",@"logo_9",@"logo_1"];
 }
 -(UICollectionView *)collectionView
 {
@@ -76,7 +77,12 @@
     CGFloat height = width - 20;
     return CGSizeMake(width, height);
 }
-
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    BrandDetailViewController *vc=[[BrandDetailViewController alloc]initWithIndex:indexPath.row];
+    [self.navigationController pushViewController:vc animated:YES];
+    
+}
 
 
 

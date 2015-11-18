@@ -9,7 +9,7 @@
 #import "ActivityDetailViewController.h"
 
 @interface ActivityDetailViewController ()
-
+@property (nonatomic,strong)UITextView *textView;
 @end
 
 @implementation ActivityDetailViewController
@@ -29,13 +29,13 @@
 }
 -(UIView *)headerView
 {
-    UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kWindowW, 200)];
+    UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 64, kWindowW, 300)];
     UIView *botoomView = [UIView new];
     botoomView.backgroundColor=[UIColor lightGrayColor];
     [headView addSubview:botoomView];
     [botoomView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.bottom.right.mas_equalTo(0);
-        make.height.mas_equalTo(130);
+        make.height.mas_equalTo(120);
     }];
     _cover=[[UIImageView alloc]initWithFrame:CGRectZero];
     //    _logoIv.layer.cornerRadius=30;
@@ -64,7 +64,7 @@
     [botoomView addSubview:_titleLb];
     [_titleLb mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(_logoIv.mas_right).mas_equalTo(5);
-        make.right.mas_equalTo(40);
+        make.right.mas_equalTo(-40);
         make.topMargin.mas_equalTo(_logoIv);
         
     }];
@@ -79,30 +79,57 @@
         make.top.mas_equalTo(_titleLb.mas_bottom).mas_equalTo(5);
         make.rightMargin.mas_equalTo(_titleLb);
     }];
+    _timeLb.text=self.model.time;
     _areaLb=[UILabel new];
 //    _areaLb.textAlignment=NSTextAlignmentCenter;
     _areaLb.font=[UIFont systemFontOfSize:14.0];
     _areaLb.numberOfLines=0;
     [botoomView addSubview:_areaLb];
     [_areaLb mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.leftMargin.mas_equalTo(_timeLb);
+        make.leftMargin.rightMargin.mas_equalTo(_timeLb);
         make.top.mas_equalTo(_timeLb.mas_bottom).mas_equalTo(5);
         
-        //        make.bottom.mas_equalTo(-15);
+        //make.bottom.mas_equalTo(-15);
     }];
     _areaLb.text=self.model.areaDetail;
-    
+//    self.textView.text=self.model.content;
+//    [botoomView addSubview:self.textView];
+//    [self.textView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.mas_equalTo(botoomView.mas_bottom).mas_equalTo(0);
+//        make.bottom.mas_equalTo(200);
+//        make.left.right.mas_equalTo(0);
+//    }];
+
     
     return headView;
+}
+-(UITextView *)textView
+{
+    if (!_textView) {
+        _textView=[[UITextView alloc]init];
+        _textView.editable=NO;
+        _textView.contentOffset=CGPointMake(0, 0);
+        _textView.font=[UIFont systemFontOfSize:14.0];
+    }
+    return _textView;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self.view addSubview:[self headerView]];
-    [[self headerView] mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake(kWindowW, 600));
+//    [[self headerView] mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.size.mas_equalTo(CGSizeMake(kWindowW, 600));
+//    }];
+    UIView *footView=[[UIView alloc]initWithFrame:CGRectMake(0, 360, kWindowW, 300)];
+    self.textView.text=self.model.content;
+    [footView addSubview:self.textView];
+    [self.textView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(0);
     }];
-    // Do any additional setup after loading the view.
+    [self.view addSubview:footView];
+    
+    
+        // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {

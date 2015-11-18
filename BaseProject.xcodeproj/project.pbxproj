@@ -23,6 +23,7 @@
 		3886C0BE1BD74AFE0014E661 /* BaseNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3886C0BD1BD74AFE0014E661 /* BaseNetManager.m */; };
 		3886C0C11BD74B090014E661 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3886C0C01BD74B090014E661 /* BaseModel.m */; };
 		53B17A311BFB9BA2007AE932 /* TuijianDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53B17A301BFB9BA2007AE932 /* TuijianDetailCell.m */; };
+		53DD25631BFCDA700008CF5C /* BrandDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53DD25621BFCDA700008CF5C /* BrandDetailViewController.m */; };
 		85057BA21BF0A51000938DA1 /* PicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85057BA11BF0A51000938DA1 /* PicViewController.m */; };
 		85057BA51BF0AA5200938DA1 /* PicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85057BA41BF0AA5200938DA1 /* PicModel.m */; };
 		85057BA81BF0AD3D00938DA1 /* PicNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85057BA71BF0AD3D00938DA1 /* PicNetManager.m */; };
@@ -54,7 +55,6 @@
 		851C35081BFC1D40007E461B /* citydict.plist in Resources */ = {isa = PBXBuildFile; fileRef = 851C34EF1BFC1D40007E461B /* citydict.plist */; };
 		851C35091BFC1D40007E461B /* CityItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 851C34F11BFC1D40007E461B /* CityItem.m */; };
 		851C350A1BFC1D40007E461B /* CityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 851C34F31BFC1D40007E461B /* CityListViewController.m */; };
-		851C35151BFC24EA007E461B /* citydict.plist in Resources */ = {isa = PBXBuildFile; fileRef = 851C35141BFC24EA007E461B /* citydict.plist */; };
 		851C351D1BFC7560007E461B /* CompanyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 851C351C1BFC7560007E461B /* CompanyDetailViewController.m */; };
 		851C35201BFCAD07007E461B /* ActivityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 851C351F1BFCAD07007E461B /* ActivityDetailViewController.m */; };
 		855865991BF2135400C1D078 /* TRImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 855865981BF2135400C1D078 /* TRImageView.m */; };
@@ -112,6 +112,8 @@
 		4329DABFE5AD654FE71597C9 /* Pods-BaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.debug.xcconfig"; sourceTree = "<group>"; };
 		53B17A2F1BFB9BA2007AE932 /* TuijianDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TuijianDetailCell.h; sourceTree = "<group>"; };
 		53B17A301BFB9BA2007AE932 /* TuijianDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TuijianDetailCell.m; sourceTree = "<group>"; };
+		53DD25611BFCDA700008CF5C /* BrandDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrandDetailViewController.h; sourceTree = "<group>"; };
+		53DD25621BFCDA700008CF5C /* BrandDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrandDetailViewController.m; sourceTree = "<group>"; };
 		5EAAD623A23724C816F8DC02 /* libPods-BaseProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaseProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85057BA01BF0A51000938DA1 /* PicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicViewController.h; sourceTree = "<group>"; };
 		85057BA11BF0A51000938DA1 /* PicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicViewController.m; sourceTree = "<group>"; };
@@ -170,7 +172,6 @@
 		851C34F11BFC1D40007E461B /* CityItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityItem.m; sourceTree = "<group>"; };
 		851C34F21BFC1D40007E461B /* CityListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityListViewController.h; sourceTree = "<group>"; };
 		851C34F31BFC1D40007E461B /* CityListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityListViewController.m; sourceTree = "<group>"; };
-		851C35141BFC24EA007E461B /* citydict.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = citydict.plist; sourceTree = "<group>"; };
 		851C351B1BFC7560007E461B /* CompanyDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyDetailViewController.h; sourceTree = "<group>"; };
 		851C351C1BFC7560007E461B /* CompanyDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompanyDetailViewController.m; sourceTree = "<group>"; };
 		851C351E1BFCAD07007E461B /* ActivityDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityDetailViewController.h; sourceTree = "<group>"; };
@@ -332,7 +333,6 @@
 			isa = PBXGroup;
 			children = (
 				85F1E9C61BF9CE7900F2F3E5 /* city.plist */,
-				851C35141BFC24EA007E461B /* citydict.plist */,
 				3886C0A21BD748830014E661 /* Assets.xcassets */,
 				3886C0AD1BD749A00014E661 /* LaunchScreen.xib */,
 				3886C09F1BD748830014E661 /* Main.storyboard */,
@@ -478,6 +478,8 @@
 			children = (
 				85F1EA1B1BFA0F2300F2F3E5 /* BrandViewController.h */,
 				85F1EA1C1BFA0F2300F2F3E5 /* BrandViewController.m */,
+				53DD25611BFCDA700008CF5C /* BrandDetailViewController.h */,
+				53DD25621BFCDA700008CF5C /* BrandDetailViewController.m */,
 			);
 			name = "品牌";
 			sourceTree = "<group>";
@@ -787,7 +789,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				85057BB41BF0BBB100938DA1 /* .gitignore in Resources */,
-				851C35151BFC24EA007E461B /* citydict.plist in Resources */,
 				851C34E81BFC1AFC007E461B /* unicode_to_hanyu_pinyin.txt in Resources */,
 				3886C0A31BD748830014E661 /* Assets.xcassets in Resources */,
 				3886C0AE1BD749A00014E661 /* LaunchScreen.xib in Resources */,
@@ -861,6 +862,7 @@
 				3886C0BE1BD74AFE0014E661 /* BaseNetManager.m in Sources */,
 				8560A01B1BE79AB6009774AF /* TuijianViewModel.m in Sources */,
 				851C34E21BFC1AFC007E461B /* ChineseToPinyinResource.m in Sources */,
+				53DD25631BFCDA700008CF5C /* BrandDetailViewController.m in Sources */,
 				851C35061BFC1D40007E461B /* ButtonGroupView.m in Sources */,
 				851C35071BFC1D40007E461B /* CityButton.m in Sources */,
 				85159A301BF0616400927523 /* TuijianCell.m in Sources */,
