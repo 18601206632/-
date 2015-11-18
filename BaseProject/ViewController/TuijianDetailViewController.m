@@ -34,7 +34,7 @@
 -(UITableView *)tableView
 {
     if (!_tableView) {
-        _tableView=[[UITableView alloc]initWithFrame:CGRectZero style:(UITableViewStylePlain)];
+        _tableView=[[UITableView alloc]initWithFrame:CGRectZero style:(UITableViewStyleGrouped)];
         _tableView.delegate=self;
         _tableView.dataSource=self;
         [self.view addSubview:_tableView];
@@ -156,8 +156,18 @@
     [imageView setImageWithURL:[NSURL URLWithString:self.Model.imageUrl[index]]];
     return view;
 }
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    if (self.detailVm.rowNumber==1) {
+        return 0;
+    }else
+    {
+        return 1;
+    }
+}
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+//    NSLog(@"%@",self.detailVm);
     return self.detailVm.rowNumber;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -166,11 +176,14 @@
     [cell.iconIv setImageWithURL:[self.detailVm iconForRow:indexPath.row]];
     cell.companyNameLb.text=[self.detailVm companyNameForRow:indexPath.row];
     cell.areaDetailLb.text=[self.detailVm companyDetailForRow:indexPath.row];
+    
     return cell;
 }
 -(CGFloat )tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return UITableViewAutomaticDimension;
+    
+        return UITableViewAutomaticDimension;
+    
 }
 - (void)viewDidLoad {
     [super viewDidLoad];

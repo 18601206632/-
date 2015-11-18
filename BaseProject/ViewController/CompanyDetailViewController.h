@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "companyModel.h"
 @interface CompanyDetailViewController : UIViewController
-
+@property (nonatomic,strong)companyModel *company;
+-(instancetype)initWithCompanyModel:(companyModel *)company;
 @end

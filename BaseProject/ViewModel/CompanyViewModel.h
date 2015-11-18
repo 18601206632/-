@@ -15,6 +15,7 @@
 -(NSURL *)logoForRow:(NSInteger)row;
 -(NSString *)companyNameForRow:(NSInteger )row;
 -(NSString *)goodHouseStyleForRow:(NSInteger )row;
+-(companyModel *)modelForRow:(NSInteger)row;
 @property (nonatomic) NSInteger page;
 @property (nonatomic,strong)NSString *city;
 -(instancetype)initWithCity:(NSString *)city;

@@ -11,6 +11,7 @@
 #import "CompanyViewModel.h"
 #import "Factory.h"
 #import "CityListViewController.h"
+#import "CompanyDetailViewController.h"
 
 @interface CompanyViewController ()<CityListViewDelegate>
 @property (nonatomic,strong)CompanyViewModel *companyVM;
@@ -83,7 +84,7 @@
 -(CompanyViewModel *)companyVM
 {
     if (!_companyVM) {
-        _companyVM=[[CompanyViewModel alloc]initWithCity:self.city];
+        _companyVM=[[CompanyViewModel alloc]initWithCity:@"上海"];
         
     }
     return _companyVM;
@@ -160,6 +161,11 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
     return 5;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CompanyDetailViewController *vc=[[CompanyDetailViewController alloc]initWithCompanyModel:[self.companyVM modelForRow:indexPath.row]];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 /*
 // Override to support conditional editing of the table view.
