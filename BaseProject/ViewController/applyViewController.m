@@ -16,9 +16,18 @@
 @property (nonatomic,strong)UITextField *telPhone;
 @property (nonatomic,strong)UITextField *emileFd;
 @property (nonatomic,strong)UIButton *btn;
+@property (nonatomic,strong)NSUserDefaults *userDefault;
 @end
 
 @implementation applyViewController
+-(NSUserDefaults *)userDefault
+{
+    if (!_userDefault) {
+        //以standard开头 ，单例模式
+        _userDefault=[NSUserDefaults standardUserDefaults];
+    }
+    return _userDefault;
+}
 
 - (UITextField *)nameFd {
     if(_nameFd == nil) {
@@ -122,6 +131,7 @@
             [self presentViewController:alertC animated:YES completion:nil];
             //为弹出框添加按钮
             UIAlertAction *sureAction=[UIAlertAction actionWithTitle:@"确认" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction *action) {
+                [self saveData];
                 [self.navigationController popViewControllerAnimated:YES];
             }] ;
             [alertC addAction:sureAction];
@@ -134,6 +144,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSString *path=NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES).firstObject;
+    NSLog(@"library path:%@",path);
     self.nameFd.font=[UIFont systemFontOfSize:16.0];
     self.genderFd.font=[UIFont systemFontOfSize:16.0];
     self.cityFd.font=[UIFont systemFontOfSize:16.0];
@@ -141,6 +153,18 @@
     self.emileFd.font=[UIFont systemFontOfSize:16.0];
     [self.btn setTitle:@"提交申请" forState:UIControlStateNormal];
     // Do any additional setup after loading the view.
+}
+- (void)saveData {
+    [self.userDefault setValue:self.nameFd.text forKey:@"name"];
+    [self.userDefault setValue:self.genderFd.text forKey:@"gender"];
+    [self.userDefault setValue:self.cityFd.text forKey:@"city"];
+    [self.userDefault setValue:self.telPhone.text forKey:@"telphone"];
+    [self.userDefault setValue:self.emileFd.text forKey:@"emile"];
+    //执行存入沙盒动作（内存-》磁盘）
+    //sychronize同步
+    //强调：系统每个RunLoop都会自动调用一次同步方法，手动调用是为了防止系统突然崩溃，导致数据未保存
+    [self.userDefault synchronize];
+    
 }
 
 - (void)didReceiveMemoryWarning {
