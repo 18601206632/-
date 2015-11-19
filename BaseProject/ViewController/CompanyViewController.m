@@ -105,13 +105,18 @@
     self.title=@"公司";
     [Factory addMenuItemToVc:self];
     [self.tableView registerClass:[CompanyCell class] forCellReuseIdentifier:@"Cell"];
-//    self.tableView.header=[MJRefreshNormalHeader headerWithRefreshingBlock:^{
-//       [self.companyVM refreshDataCompletionHandle:^(NSError *error) {
-//           [self.tableView reloadData];
-//           [self.tableView.header endRefreshing];
-//       }];
-//    }];
-//    [self.tableView.header beginRefreshing];
+    if(!self.city)
+    {
+        self.companyVM = [[CompanyViewModel alloc]initWithCity:@"北京"];
+        self.tableView.header=[MJRefreshNormalHeader headerWithRefreshingBlock:^{
+            [self.companyVM refreshDataCompletionHandle:^(NSError *error) {
+                [self.tableView reloadData];
+                [self.tableView.header endRefreshing];
+            }];
+        }];
+        [self.tableView.header beginRefreshing];
+
+    }
     self.tableView.footer=[MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
         [self.companyVM getMoreDataCompletionHandle:^(NSError *error) {
             [self.tableView reloadData];
