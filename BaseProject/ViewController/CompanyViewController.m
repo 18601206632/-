@@ -41,18 +41,12 @@
         _button=[UIButton buttonWithType:UIButtonTypeCustom];
         _button.backgroundColor=[UIColor orangeColor];
         _button.frame=CGRectMake(0, 0, 55, 30);
-        self.city=@"北京";
+        
         [_button setTitle:@"北京" forState:(UIControlStateNormal)];
         [_button bk_addEventHandler:^(id sender) {
             [self presentViewController:self.cityListView animated:YES completion:nil];
 //            [self.tableView registerClass:[CompanyCell class] forCellReuseIdentifier:@"Cell"];
-            self.tableView.header=[MJRefreshNormalHeader headerWithRefreshingBlock:^{
-                [self.companyVM refreshDataCompletionHandle:^(NSError *error) {
-                    [self.tableView reloadData];
-                    [self.tableView.header endRefreshing];
-                }];
-            }];
-            [self.tableView.header beginRefreshing];
+            
             
         } forControlEvents:(UIControlEventTouchUpInside)];
         
@@ -61,9 +55,23 @@
 }
 - (void)didClickedWithCityName:(NSString*)cityName
 {
+//    if (self.city==nil) {
+//        self.companyVM=[[CompanyViewModel alloc]initWithCity:@"北京"];
+//    }else
+//    {
     self.city=cityName;
-    self.companyVM.city=self.city;
+    self.companyVM=[[CompanyViewModel alloc]initWithCity:self.city];
+    self.tableView.header=[MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        
+        [self.companyVM refreshDataCompletionHandle:^(NSError *error) {
+            [self.tableView reloadData];
+            [self.tableView.header endRefreshing];
+        }];
+    }];
+    [self.tableView.header beginRefreshing];
+    
     [self.button setTitle:self.city forState:UIControlStateNormal];
+//    }
 }
 //-(void)didClickedWithCompanyViewModel:(CompanyViewModel *)companyVM cityName:(NSString *)cityName
 //{
@@ -81,14 +89,14 @@
     });
     return navi;
 }
--(CompanyViewModel *)companyVM
-{
-    if (!_companyVM) {
-        _companyVM=[[CompanyViewModel alloc]initWithCity:self.city];
-        
-    }
-    return _companyVM;
-}
+//-(CompanyViewModel *)companyVM
+//{
+//    if (!_companyVM) {
+//        _companyVM=[[CompanyViewModel alloc]initWithCity:self.city];
+//        
+//    }
+//    return _companyVM;
+//}
 
 
 
@@ -97,13 +105,13 @@
     self.title=@"公司";
     [Factory addMenuItemToVc:self];
     [self.tableView registerClass:[CompanyCell class] forCellReuseIdentifier:@"Cell"];
-    self.tableView.header=[MJRefreshNormalHeader headerWithRefreshingBlock:^{
-       [self.companyVM refreshDataCompletionHandle:^(NSError *error) {
-           [self.tableView reloadData];
-           [self.tableView.header endRefreshing];
-       }];
-    }];
-    [self.tableView.header beginRefreshing];
+//    self.tableView.header=[MJRefreshNormalHeader headerWithRefreshingBlock:^{
+//       [self.companyVM refreshDataCompletionHandle:^(NSError *error) {
+//           [self.tableView reloadData];
+//           [self.tableView.header endRefreshing];
+//       }];
+//    }];
+//    [self.tableView.header beginRefreshing];
     self.tableView.footer=[MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
         [self.companyVM getMoreDataCompletionHandle:^(NSError *error) {
             [self.tableView reloadData];

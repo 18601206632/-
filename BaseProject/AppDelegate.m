@@ -18,6 +18,7 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [SMSSDK registerApp:@"bbd329817550" withSecret:@"8d64b58f7b3bcd09ac0a5fae73e80cac"];
     // Override point for customization after application launch.
 //    [TuijianNetModel getPage:1 completionHandle:^(NSArray *models, NSError *error) {
 //        NSLog(@"...");

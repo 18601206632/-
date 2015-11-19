@@ -8,6 +8,7 @@
 
 #import "FreeViewController.h"
 #import "Factory.h"
+#import "FreeDetailViewController.h"
 @interface FreeViewController ()
 @property (nonatomic,strong)UIImageView *IV;
 @property (nonatomic,strong)UIButton *btn;
@@ -29,8 +30,12 @@
 {
     if (!_btn) {
         _btn=[UIButton buttonWithType:0];
-        _btn.backgroundColor=[UIColor greenColor];
+//        _btn.backgroundColor=[UIColor greenColor];
         _btn.titleLabel.textColor=[UIColor whiteColor];
+        [_btn bk_addEventHandler:^(id sender) {
+            FreeDetailViewController *vc=[[FreeDetailViewController alloc]init];
+            [self.navigationController pushViewController:vc animated:YES];
+        } forControlEvents:(UIControlEventTouchUpInside)];
     
     }
     return _btn;
@@ -52,7 +57,7 @@
     }];
     [self.view addSubview:self.btn];
     [self.btn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(UIEdgeInsetsMake(500, 30, 110, 30));
+        make.edges.mas_equalTo(UIEdgeInsetsMake(400, 30, 110, 30));
     }];
     [self.btn setTitle:@"申请免费服务(量房·设计·方案)" forState:(UIControlStateNormal)];
     self.title=@"免费方案";
