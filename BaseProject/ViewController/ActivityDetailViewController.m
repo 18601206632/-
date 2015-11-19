@@ -7,7 +7,7 @@
 //
 
 #import "ActivityDetailViewController.h"
-
+#import "applyViewController.h"
 @interface ActivityDetailViewController ()
 @property (nonatomic,strong)UITextView *textView;
 @end
@@ -19,6 +19,7 @@
     UILabel *_titleLb;
     UILabel *_timeLb;
     UILabel *_areaLb;
+    UIButton *_applyBtn;
 }
 -(instancetype)initWithModel:(ActivityModel *)model
 {
@@ -31,7 +32,7 @@
 {
     UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 64, kWindowW, 300)];
     UIView *botoomView = [UIView new];
-    botoomView.backgroundColor=[UIColor lightGrayColor];
+    botoomView.backgroundColor=[UIColor whiteColor];
     [headView addSubview:botoomView];
     [botoomView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.bottom.right.mas_equalTo(0);
@@ -69,6 +70,19 @@
         
     }];
     _titleLb.text = self.model.name;
+    if ([_model.type isEqualToString:@"1"]) {
+        _applyBtn=[UIButton buttonWithType:(UIButtonTypeCustom)];
+        [botoomView addSubview:_applyBtn];
+        [_applyBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.right.bottom.mas_equalTo(0);
+            make.left.mas_equalTo(_titleLb.mas_right).mas_equalTo(3);
+        }];
+        [_applyBtn setBackgroundImage:[UIImage imageNamed:@"company_arrow_left"] forState:(UIControlStateNormal)];
+        [_applyBtn bk_addEventHandler:^(id sender) {
+                [self.navigationController pushViewController:[applyViewController new] animated:YES];
+        } forControlEvents:(UIControlEventTouchUpInside)];
+        
+    }
     //添加滚动栏
     _timeLb =[UILabel new];
     _timeLb.numberOfLines=0;

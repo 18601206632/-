@@ -126,7 +126,7 @@
 {
     UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, kWindowW)];
     UIView *botoomView = [UIView new];
-    botoomView.backgroundColor=[UIColor lightGrayColor];
+    botoomView.backgroundColor=[UIColor whiteColor];
     [headView addSubview:botoomView];
     [botoomView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.bottom.right.mas_equalTo(0);

@@ -7,7 +7,7 @@
 //
 
 #import "ActivityCell.h"
-
+#import "applyViewController.h"
 @implementation ActivityCell
 - (UILabel *)titleLb {
     if(_titleLb == nil) {
@@ -70,21 +70,33 @@
     }
     return _iconIv;
 }
-- (UILabel *)attendLb {
-    if(_attendLb == nil) {
-        _attendLb = [[UILabel alloc] init];
-        _attendLb.textColor=[UIColor greenColor];
-        _attendLb.text=@"报名";
-        _attendLb.font=[UIFont systemFontOfSize:16.0];
-        [self.contentView addSubview:_attendLb];
-        [_attendLb mas_makeConstraints:^(MASConstraintMaker *make) {
+//- (UILabel *)attendLb {
+//    if(_attendLb == nil) {
+//        _attendLb = [[UILabel alloc] init];
+//        _attendLb.textColor=[UIColor greenColor];
+//        _attendLb.font=[UIFont systemFontOfSize:16.0];
+//        [self.contentView addSubview:_attendLb];
+//        [_attendLb mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.right.mas_equalTo(-10);
+//            make.bottomMargin.mas_equalTo(self.iconIv);
+//        }];
+//    }
+//    return _attendLb;
+//}
+-(UIButton *)attendBtn
+{
+    if (_attendBtn==nil) {
+        _attendBtn=[UIButton buttonWithType:(UIButtonTypeCustom)];
+        [_attendBtn setBackgroundImage:[UIImage imageNamed:@"activity-Register"] forState:(UIControlStateNormal)];
+        [self.contentView addSubview:_attendBtn];
+        [_attendBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.mas_equalTo(-10);
             make.bottomMargin.mas_equalTo(self.iconIv);
         }];
+        
     }
-    return _attendLb;
+    return _attendBtn;
 }
-
 - (void)awakeFromNib {
     // Initialization code
 }

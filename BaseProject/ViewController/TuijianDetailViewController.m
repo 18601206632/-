@@ -57,14 +57,14 @@
 {
      UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, kWindowW/750 * 600)];
     UIView *botoomView = [UIView new];
-    botoomView.backgroundColor=[UIColor lightGrayColor];
+    botoomView.backgroundColor=[UIColor whiteColor];
     [headView addSubview:botoomView];
     [botoomView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.bottom.right.mas_equalTo(0);
         make.height.mas_equalTo(80);
     }];
     _titleLb = [UILabel new];
-    _titleLb.textAlignment=UITextAlignmentCenter;
+    _titleLb.textAlignment=NSTextAlignmentCenter;
     [botoomView addSubview:_titleLb];
     [_titleLb mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(0);

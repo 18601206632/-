@@ -13,7 +13,7 @@
 @property (nonatomic,strong)UILabel *timeLb;
 @property (nonatomic,strong)UILabel *areaDetail;
 @property (nonatomic,strong)UIImageView *iconIv;
-@property (nonatomic,strong)UILabel *attendLb;
-
+//@property (nonatomic,strong)UILabel *attendLb;
+@property (nonatomic,strong)UIButton *attendBtn;
 
 @end

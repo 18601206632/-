@@ -8,6 +8,7 @@
 
 #import "SubmitViewController.h"
 #import <SMS_SDK/SMSSDK.h>
+#import "applyViewController.h"
 @interface SubmitViewController ()
 @property (nonatomic,strong)UITextField *submitF;
 @property (nonatomic,strong)UIButton *submitBtn;
@@ -51,6 +52,8 @@
                     NSLog(@"验证码不正确%@",error);
                 }else
                 {
+                    applyViewController *vc=[[applyViewController alloc]init];
+                    [self.navigationController pushViewController:vc animated:YES];
                     NSLog(@"验证码正确");
                 }
             }];

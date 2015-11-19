@@ -7,7 +7,7 @@
 //
 
 #import "applyViewController.h"
-
+#import "LeftViewController.h"
 @interface applyViewController ()
 
 @property (nonatomic,strong)UITextField *nameFd;
@@ -118,8 +118,13 @@
             
         }];
         [_btn bk_addEventHandler:^(id sender) {
-            
-            
+            UIAlertController *alertC=[UIAlertController alertControllerWithTitle:@"提示" message:@"资料已存档稍后会有人联系您" preferredStyle:(UIAlertControllerStyleAlert)];
+            [self presentViewController:alertC animated:YES completion:nil];
+            //为弹出框添加按钮
+            UIAlertAction *sureAction=[UIAlertAction actionWithTitle:@"确认" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction *action) {
+                [self.navigationController popViewControllerAnimated:YES];
+            }] ;
+            [alertC addAction:sureAction];
         } forControlEvents:(UIControlEventTouchUpInside)];
     }
     return _btn;
@@ -129,7 +134,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.nameFd.font=[UIFont systemFontOfSize:16.0];
+    self.genderFd.font=[UIFont systemFontOfSize:16.0];
+    self.cityFd.font=[UIFont systemFontOfSize:16.0];
+    self.telPhone.font=[UIFont systemFontOfSize:16.0];
+    self.emileFd.font=[UIFont systemFontOfSize:16.0];
+    [self.btn setTitle:@"提交申请" forState:UIControlStateNormal];
     // Do any additional setup after loading the view.
 }
 

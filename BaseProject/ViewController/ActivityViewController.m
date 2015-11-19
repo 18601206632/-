@@ -80,9 +80,11 @@
     cell.titleLb.text=[self.ActivityVM titleForRow:indexPath.row];
     cell.timeLb.text=[self.ActivityVM timeForRow:indexPath.row];
     cell.areaDetail.text=[self.ActivityVM areaDetail:indexPath.row];
-    cell.attendLb.text=nil;
+    [cell.attendBtn setBackgroundImage:nil forState:(UIControlStateNormal)];
+//    cell.attendLb.text=nil;
     if ([self.ActivityVM containType:indexPath.row]) {
-        cell.attendLb.text=@"报名";
+        [cell.attendBtn setBackgroundImage:[UIImage imageNamed:@"activity-Register" ] forState:(UIControlStateNormal)];
+       
         
     }
     return cell;
