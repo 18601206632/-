@@ -12,19 +12,21 @@
 #import "PicListViewController.h"
 #import "CompanyViewController.h"
 #import "ActivityViewController.h"
-
+#import "PhtotsViewController.h"
 #import "LingganViewController.h"
 #import "FreeViewController.h"
 #import "BrandViewController.h"
-@interface LeftViewController ()<UITableViewDelegate,UITableViewDataSource>
+#import "PhtotsViewController.h"
+@interface LeftViewController ()<UITableViewDelegate,UITableViewDataSource,PhotoViewDelegate>
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)NSArray *itemNames;
+//@property (nonatomic,strong)PhtotsViewController *phcontroller;
 @end
 
 @implementation LeftViewController
 -(NSArray *)itemNames
 {
-    return @[@"精选推荐",@"家居图库",@"免费方案",@"家装公司",@"品牌展厅",@"优选活动"];
+    return @[@"精选推荐",@"家居图库",@"免费方案",@"家装公司",@"品牌展厅",@"优选活动",@"更换壁纸"];
 }
 -(UITableView *)tableView
 {
@@ -40,6 +42,7 @@
             make.left.mas_equalTo(0);
             make.centerY.mas_equalTo(0);
         }];
+       
         _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
         
     }
@@ -90,12 +93,18 @@ kRemoveCellSeparator
             break;
         case 5:
             [self.sideMenuViewController setContentViewController:[ActivityViewController defaultNavi] animated:YES];
+//            self.sideMenuViewController.backgroundImage=[UIImage imageNamed:@"LOADING_bg0"];
             [self.sideMenuViewController hideMenuViewController];
             break;
-//        case 6:
-//            [self.sideMenuViewController setContentViewController:[LingganViewController defaultNavi] animated:YES];
-//            [self.sideMenuViewController hideMenuViewController];
-//            break;
+        case 6:
+        {
+            PhtotsViewController *vc=[PhtotsViewController new];
+            [self.sideMenuViewController setContentViewController:[vc defaultNavi] animated:YES];
+            vc.delegate=self;
+//            self.sideMenuViewController.backgroundImage=[UIImage imageNamed:@"LOADING_bg0"];
+            [self.sideMenuViewController hideMenuViewController];
+        }
+            break;
         
             
         default:
@@ -103,6 +112,11 @@ kRemoveCellSeparator
     }
 }
 
+-(void)didClickPhotoWithName:(NSString *)name
+{
+    self.sideMenuViewController.backgroundImage=[UIImage imageNamed:name];
+    [self.sideMenuViewController leftMenuViewController];
+}
 
 
 
@@ -111,7 +125,6 @@ kRemoveCellSeparator
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.tableView reloadData];
-    
     
     // Do any additional setup after loading the view.
 }

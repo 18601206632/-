@@ -79,6 +79,7 @@
 		85D243631BF1B2090012F644 /* companyNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D243621BF1B2090012F644 /* companyNetManager.m */; };
 		85D243661BF1B4CA0012F644 /* CompanyViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D243651BF1B4CA0012F644 /* CompanyViewModel.m */; };
 		85D243691BF1B5F70012F644 /* CompanyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D243681BF1B5F70012F644 /* CompanyCell.m */; };
+		85E8DB2D1BFF1E78005BE70C /* PhtotsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E8DB2C1BFF1E78005BE70C /* PhtotsViewController.m */; };
 		85F1E9671BF9662400F2F3E5 /* ActivityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F1E9661BF9662400F2F3E5 /* ActivityModel.m */; };
 		85F1E96D1BF969AA00F2F3E5 /* ActivityViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F1E96C1BF969AA00F2F3E5 /* ActivityViewModel.m */; };
 		85F1E9711BF971AC00F2F3E5 /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F1E9701BF971AC00F2F3E5 /* ActivityViewController.m */; };
@@ -224,6 +225,8 @@
 		85D243651BF1B4CA0012F644 /* CompanyViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompanyViewModel.m; sourceTree = "<group>"; };
 		85D243671BF1B5F70012F644 /* CompanyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyCell.h; sourceTree = "<group>"; };
 		85D243681BF1B5F70012F644 /* CompanyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompanyCell.m; sourceTree = "<group>"; };
+		85E8DB2B1BFF1E78005BE70C /* PhtotsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhtotsViewController.h; sourceTree = "<group>"; };
+		85E8DB2C1BFF1E78005BE70C /* PhtotsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhtotsViewController.m; sourceTree = "<group>"; };
 		85F1E9651BF9662400F2F3E5 /* ActivityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityModel.h; sourceTree = "<group>"; };
 		85F1E9661BF9662400F2F3E5 /* ActivityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityModel.m; sourceTree = "<group>"; };
 		85F1E96B1BF969AA00F2F3E5 /* ActivityViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityViewModel.h; sourceTree = "<group>"; };
@@ -417,6 +420,7 @@
 		3886C0B61BD74A4A0014E661 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				85E8DB2E1BFF4F78005BE70C /* 壁纸 */,
 				8508C5311BFB1EF2006DBA04 /* 方案 */,
 				8508C5301BFB1EDA006DBA04 /* 品牌 */,
 				8508C52F1BFB1ECD006DBA04 /* 灵感 */,
@@ -757,6 +761,15 @@
 			path = SMS_SDK;
 			sourceTree = "<group>";
 		};
+		85E8DB2E1BFF4F78005BE70C /* 壁纸 */ = {
+			isa = PBXGroup;
+			children = (
+				85E8DB2B1BFF1E78005BE70C /* PhtotsViewController.h */,
+				85E8DB2C1BFF1E78005BE70C /* PhtotsViewController.m */,
+			);
+			name = "壁纸";
+			sourceTree = "<group>";
+		};
 		85F779001BE83D4300354BDA /* ScrollDisplay */ = {
 			isa = PBXGroup;
 			children = (
@@ -951,6 +964,7 @@
 				85F1E9711BF971AC00F2F3E5 /* ActivityViewController.m in Sources */,
 				85F1E96D1BF969AA00F2F3E5 /* ActivityViewModel.m in Sources */,
 				85F1EA1D1BFA0F2300F2F3E5 /* BrandViewController.m in Sources */,
+				85E8DB2D1BFF1E78005BE70C /* PhtotsViewController.m in Sources */,
 				53B17A311BFB9BA2007AE932 /* TuijianDetailCell.m in Sources */,
 				3835CFB71BD90E150024CA48 /* ViewController.m in Sources */,
 				8508C5491BFB2313006DBA04 /* iCarousel.m in Sources */,

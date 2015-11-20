@@ -11,6 +11,7 @@
 #import "TuijianNetManager.h"
 #import "ViewController.h"
 #import "LeftViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -55,6 +56,5 @@
     }
     return _sideMenu;
 }
-
 
 @end
