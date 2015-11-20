@@ -61,7 +61,6 @@
 }
 
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    [Factory addMenuItemToVc:self];
