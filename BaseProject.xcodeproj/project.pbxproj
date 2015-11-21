@@ -62,6 +62,7 @@
 		8560A0151BE79581009774AF /* TuijianModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8560A0141BE79581009774AF /* TuijianModel.m */; };
 		8560A0181BE796C6009774AF /* TuijianNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8560A0171BE796C6009774AF /* TuijianNetManager.m */; };
 		8560A01B1BE79AB6009774AF /* TuijianViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8560A01A1BE79AB6009774AF /* TuijianViewModel.m */; };
+		8565DD0E1C004ABA00ADA1AF /* TuijianCompanyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8565DD0D1C004ABA00ADA1AF /* TuijianCompanyViewController.m */; };
 		859D41C71BFD751A00BEF8C2 /* SMS_SDKLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 859D41C21BFD751A00BEF8C2 /* SMS_SDKLocalizable.strings */; };
 		859D41C81BFD751A00BEF8C2 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 859D41C41BFD751A00BEF8C2 /* MOBFoundation.framework */; };
 		859D41C91BFD751A00BEF8C2 /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 859D41C51BFD751A00BEF8C2 /* SMS_SDK.framework */; };
@@ -200,6 +201,8 @@
 		8560A0171BE796C6009774AF /* TuijianNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TuijianNetManager.m; sourceTree = "<group>"; };
 		8560A0191BE79AB6009774AF /* TuijianViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TuijianViewModel.h; sourceTree = "<group>"; };
 		8560A01A1BE79AB6009774AF /* TuijianViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TuijianViewModel.m; sourceTree = "<group>"; };
+		8565DD0C1C004ABA00ADA1AF /* TuijianCompanyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TuijianCompanyViewController.h; sourceTree = "<group>"; };
+		8565DD0D1C004ABA00ADA1AF /* TuijianCompanyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TuijianCompanyViewController.m; sourceTree = "<group>"; };
 		859D41C31BFD751A00BEF8C2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SMS_SDKLocalizable.strings; sourceTree = "<group>"; };
 		859D41C41BFD751A00BEF8C2 /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
 		859D41C51BFD751A00BEF8C2 /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
@@ -471,6 +474,8 @@
 				3835CFB61BD90E150024CA48 /* ViewController.m */,
 				8508C5431BFB222E006DBA04 /* TuijianDetailViewController.h */,
 				8508C5441BFB222E006DBA04 /* TuijianDetailViewController.m */,
+				8565DD0C1C004ABA00ADA1AF /* TuijianCompanyViewController.h */,
+				8565DD0D1C004ABA00ADA1AF /* TuijianCompanyViewController.m */,
 			);
 			name = "推荐";
 			sourceTree = "<group>";
@@ -982,6 +987,7 @@
 				3886C0BB1BD74AE90014E661 /* BaseViewModel.m in Sources */,
 				85057BA21BF0A51000938DA1 /* PicViewController.m in Sources */,
 				8560A0181BE796C6009774AF /* TuijianNetManager.m in Sources */,
+				8565DD0E1C004ABA00ADA1AF /* TuijianCompanyViewController.m in Sources */,
 				3886C0C11BD74B090014E661 /* BaseModel.m in Sources */,
 				85057BAB1BF0B6A900938DA1 /* PicViewModel.m in Sources */,
 				8508C5451BFB222E006DBA04 /* TuijianDetailViewController.m in Sources */,

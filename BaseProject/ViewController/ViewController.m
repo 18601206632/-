@@ -131,6 +131,7 @@
     TuijianDetailViewController *vc=[[TuijianDetailViewController alloc]initWithTuijianModel:[self.tuijianVM TuijianModelForRow:indexPath.row]];
     vc.city=self.city;
     [self.navigationController pushViewController:vc animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 

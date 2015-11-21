@@ -9,6 +9,7 @@
 #import "TuijianDetailViewController.h"
 #import "TuijianDetailViewModel.h"
 #import "TuijianDetailCell.h"
+#import "TuijianCompanyViewController.h"
 @interface TuijianDetailViewController ()<iCarouselDelegate,iCarouselDataSource,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)TuijianDetailViewModel *detailVm;
@@ -201,10 +202,14 @@
     }];
     self.tableView.tableFooterView=view;
     
-    
-    // Do any additional setup after loading the view.
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    TuijianCompanyViewController *vc=[[TuijianCompanyViewController alloc]initWithModel:[self.detailVm modelForRow:indexPath.row]];
+    [self.navigationController pushViewController:vc animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
