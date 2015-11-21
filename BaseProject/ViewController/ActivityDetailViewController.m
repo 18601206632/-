@@ -142,7 +142,7 @@
     UIBarButtonItem *spaceItem=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:(UIBarButtonSystemItemFixedSpace) target:nil action:nil];
     spaceItem.width=self.view.bounds.size.width/2-40;
     [self setToolbarItems:@[spaceItem,barbtn]];
-    
+//   appkey  56502e49e0f55a9472001231
 //    [[self headerView] mas_makeConstraints:^(MASConstraintMaker *make) {
 //        make.size.mas_equalTo(CGSizeMake(kWindowW, 600));
 //    }];
