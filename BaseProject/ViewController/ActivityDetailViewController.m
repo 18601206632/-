@@ -131,6 +131,18 @@
     [super viewDidLoad];
     
     [self.view addSubview:[self headerView]];
+    [self.navigationController setToolbarHidden:NO animated:YES];
+    UIButton *btn=[UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame=CGRectMake(0, 0, 40, 40);
+    [btn setBackgroundImage:[UIImage imageNamed:@"fav_1_1"] forState:UIControlStateNormal];
+    
+//    [btn setTitleColor:[UIColor redColor] forState:(UIControlStateNormal)];
+    UIBarButtonItem *barbtn=[[UIBarButtonItem alloc]initWithCustomView:btn];
+    
+    UIBarButtonItem *spaceItem=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:(UIBarButtonSystemItemFixedSpace) target:nil action:nil];
+    spaceItem.width=self.view.bounds.size.width/2-40;
+    [self setToolbarItems:@[spaceItem,barbtn]];
+    
 //    [[self headerView] mas_makeConstraints:^(MASConstraintMaker *make) {
 //        make.size.mas_equalTo(CGSizeMake(kWindowW, 600));
 //    }];

@@ -43,7 +43,7 @@
 {
     if (!_button) {
         _button=[UIButton buttonWithType:UIButtonTypeCustom];
-        _button.backgroundColor=[UIColor orangeColor];
+        _button.backgroundColor=kNaviTitleColor;
         _button.frame=CGRectMake(0, 0, 55, 30);
         self.city=@"北京";
         [_button setTitle:@"北京" forState:(UIControlStateNormal)];
